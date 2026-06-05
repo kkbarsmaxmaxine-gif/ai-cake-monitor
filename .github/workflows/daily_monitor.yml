@@ -45,6 +45,9 @@ jobs:
       # ── 3. Run monitor ───────────────────────────────────────────────────────
       - name: Run AI Cake Monitor
         id: monitor
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           DATE=$(date -u +%Y%m%d)
           echo "date=${DATE}" >> "$GITHUB_OUTPUT"

@@ -27,6 +27,7 @@ from config import LAYERS, BENCHMARK, LOG_LEVEL
 from fetcher import fetch_daily_data, fetch_intraday_data, build_snapshot
 from analyzer import build_full_analysis
 from reporter import generate_report, print_terminal_summary, save_report
+from notifier import send_notification
 
 
 def _setup_logging(level: str) -> logging.Logger:
@@ -120,6 +121,10 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
     report_md   = generate_report(analysis, benchmark_chg, date_str)
     report_path = save_report(report_md, date_str)
     logger.info("Report → %s", report_path)
+
+    # ── Step 6: Telegram notification ────────────────────────────────────────
+    logger.info("=== Step 6: Telegram ===")
+    send_notification(analysis, benchmark_chg, date_str, report_path)
 
     return {
         "snapshot":      snapshot,
