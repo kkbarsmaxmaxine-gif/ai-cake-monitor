@@ -1,0 +1,83 @@
+name: AI Cake Monitor — Daily Run
+
+on:
+  # Weekdays at 22:00 UTC = 6 PM EDT / 5 PM EST (after US market close)
+  schedule:
+    - cron: "0 22 * * 1-5"
+
+  # Allow manual trigger from Actions tab (useful for testing or re-running)
+  workflow_dispatch:
+    inputs:
+      skip_intraday:
+        description: "Skip intraday 5m fetch (faster, no rebound metrics)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write   # needed to commit the daily report back to the repo
+
+jobs:
+  run-monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # ── 2. Python setup ──────────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── 3. Run monitor ───────────────────────────────────────────────────────
+      - name: Run AI Cake Monitor
+        id: monitor
+        run: |
+          DATE=$(date -u +%Y%m%d)
+          echo "date=${DATE}" >> "$GITHUB_OUTPUT"
+
+          EXTRA_FLAGS=""
+          # Honour manual skip_intraday input; default to false on schedule
+          if [ "${{ github.event.inputs.skip_intraday }}" = "true" ]; then
+            EXTRA_FLAGS="--skip-intraday"
+          fi
+
+          python main.py --date "$DATE" $EXTRA_FLAGS
+
+      # ── 4. Upload report as workflow artifact (always retained for 30 days) ──
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-cake-monitor-${{ steps.monitor.outputs.date }}
+          path: output/ai_cake_monitor_${{ steps.monitor.outputs.date }}.md
+          retention-days: 30
+
+      # ── 5. Commit report back to repo ────────────────────────────────────────
+      # Creates output/ai_cake_monitor_YYYYMMDD.md in the repo as a permanent log.
+      - name: Commit daily report to repo
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          DATE=${{ steps.monitor.outputs.date }}
+          REPORT="output/ai_cake_monitor_${DATE}.md"
+
+          git add "$REPORT"
+
+          if git diff --cached --quiet; then
+            echo "Nothing to commit (report unchanged)."
+          else
+            git commit -m "chore: daily AI cake monitor report ${DATE}"
+            git push
+          fi
