@@ -11,6 +11,7 @@ import logging
 import os
 import urllib.request
 import urllib.parse
+import urllib.error
 import json
 from pathlib import Path
 
@@ -33,6 +34,10 @@ def _post(token: str, method: str, payload: dict) -> bool:
                 logger.warning("Telegram API error: %s", result)
                 return False
             return True
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode(errors="replace")
+        logger.warning("Telegram HTTP %s: %s", exc.code, body)
+        return False
     except Exception as exc:
         logger.warning("Telegram send failed: %s", exc)
         return False
@@ -89,21 +94,21 @@ def build_message(analysis: dict, benchmark_chg: float | None, date_str: str) ->
     narrative  = analysis.get("narrative", {})
     snapshot   = analysis.get("snapshot")
 
-    bm = f"S\\&P500 {_pct(benchmark_chg)}" if benchmark_chg is not None else "S\\&P500 N/A"
+    bm = f"S&P500 {_pct(benchmark_chg)}" if benchmark_chg is not None else "S&P500 N/A"
 
     lines = [
-        f"📊 *AI 五層蛋糕 {date_str}*",
+        f"📊 AI 五層蛋糕 {date_str}",
         f"基準: {bm}",
         "",
     ]
 
     # Layer ranking
     if layer_perf is not None and not layer_perf.empty:
-        lines.append("*各層漲跌:*")
+        lines.append("各層漲跌:")
         for _, row in layer_perf.iterrows():
             chg  = row["avg_change"]
             sign = "▲" if chg > 0 else "▼"
-            lines.append(f"  {sign} {row['layer_label']}  `{_pct(chg)}`")
+            lines.append(f"  {sign} {row['layer_label']}  {_pct(chg)}")
         lines.append("")
 
     # Narrative
@@ -113,11 +118,12 @@ def build_message(analysis: dict, benchmark_chg: float | None, date_str: str) ->
         weakest = narrative.get("weakest", {})
         signal  = narrative.get("signal", "")
         signal_icon = {"strong": "✅", "weak": "⚠️", "defensive": "🚨"}.get(signal, "")
+        signal_text = {"strong": "方向清晰", "weak": "方向分散", "defensive": "全層承壓"}.get(signal, "")
         lines += [
-            f"🎯 *當前主線: {verdict}*",
-            f"最強: {leading.get('label', '')} \\({_pct(leading.get('avg_pct'))}\\)",
-            f"最弱: {weakest.get('label', '')} \\({_pct(weakest.get('avg_pct'))}\\)",
-            f"{signal_icon} {{'strong':'方向清晰','weak':'方向分散','defensive':'全層承壓'}.get(signal, '')}",
+            f"🎯 當前主線: {verdict}",
+            f"最強: {leading.get('label', '')} ({_pct(leading.get('avg_pct'))})",
+            f"最弱: {weakest.get('label', '')} ({_pct(weakest.get('avg_pct'))})",
+            f"{signal_icon} {signal_text}",
             "",
         ]
 
@@ -129,15 +135,15 @@ def build_message(analysis: dict, benchmark_chg: float | None, date_str: str) ->
             .nlargest(3, "relative_strength")
         )
         if not top3.empty:
-            lines.append("*抗跌冠軍:*")
+            lines.append("抗跌冠軍:")
             for _, row in top3.iterrows():
                 rs = row["relative_strength"]
                 lines.append(
-                    f"  🥇 {row['display_name']}  "
-                    f"`{_pct(row['change_pct'])}` \\(\\+{rs:.2f}% vs 本層\\)"
+                    f"  {row['display_name']}  "
+                    f"{_pct(row['change_pct'])} (+{rs:.2f}% vs 本層)"
                 )
 
-    lines.append("\n_詳見 output/ 報告_")
+    lines.append("\n詳見 output/ 報告")
     return "\n".join(lines)
 
 
@@ -156,9 +162,8 @@ def send_notification(
 
     msg = build_message(analysis, benchmark_chg, date_str)
     ok  = _post(token, "sendMessage", {
-        "chat_id":    chat_id,
-        "text":       msg,
-        "parse_mode": "MarkdownV2",
+        "chat_id": chat_id,
+        "text":    msg,
     })
     if ok:
         logger.info("Telegram message sent")
