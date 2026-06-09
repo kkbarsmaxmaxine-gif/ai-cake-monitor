@@ -16,6 +16,7 @@ Usage
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 import sys
 from datetime import datetime
@@ -37,6 +38,57 @@ def _setup_logging(level: str) -> logging.Logger:
         datefmt="%H:%M:%S",
     )
     return logging.getLogger("main")
+
+
+def _save_web_data(analysis: dict, benchmark_chg: float | None, date_str: str) -> None:
+    """Write docs/data.json for the bubble-chart web dashboard."""
+    from config import LAYERS
+    layer_perf = analysis.get("layer_perf")
+    resilience = analysis.get("resilience")
+    snapshot   = analysis.get("snapshot")
+    if layer_perf is None or layer_perf.empty:
+        return
+
+    layers_out = []
+    for _, row in layer_perf.iterrows():
+        layer_id = row["layer_id"]
+        # Top 3 stocks by relative_strength within this layer
+        top_stocks = []
+        if resilience is not None and not resilience.empty:
+            sub = resilience[resilience["layer"] == layer_id].head(3)
+            for _, sr in sub.iterrows():
+                top_stocks.append({
+                    "ticker":       sr["ticker"],
+                    "display_name": sr["display_name"],
+                    "change_pct":   round(float(sr["change_pct"]), 2)
+                                    if sr["change_pct"] == sr["change_pct"] else None,
+                })
+        layers_out.append({
+            "layer_id":      layer_id,
+            "label":         row["layer_label"],
+            "cake_layer":    int(row["cake_layer"]),
+            "avg_change":    round(float(row["avg_change"]), 2)
+                             if row["avg_change"] == row["avg_change"] else None,
+            "avg_vol_ratio": round(float(row["avg_vol_ratio"]), 2)
+                             if row["avg_vol_ratio"] == row["avg_vol_ratio"] else None,
+            "best_ticker":   row["best_ticker"],
+            "best_pct":      round(float(row["best_pct"]), 2),
+            "worst_ticker":  row["worst_ticker"],
+            "worst_pct":     round(float(row["worst_pct"]), 2),
+            "top_stocks":    top_stocks,
+        })
+
+    payload = {
+        "date":          date_str,
+        "benchmark_chg": round(float(benchmark_chg), 2) if benchmark_chg is not None else None,
+        "layers":        layers_out,
+    }
+
+    docs_dir = Path(__file__).parent / "docs"
+    docs_dir.mkdir(exist_ok=True)
+    out_path = docs_dir / "data.json"
+    out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    logging.getLogger("main").info("Web data → %s", out_path)
 
 
 def _build_ticker_maps() -> tuple[list[str], dict[str, str], dict[str, str]]:
@@ -122,8 +174,12 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
     report_path = save_report(report_md, date_str)
     logger.info("Report → %s", report_path)
 
-    # ── Step 6: Telegram notification ────────────────────────────────────────
-    logger.info("=== Step 6: Telegram ===")
+    # ── Step 6: Generate web data.json ───────────────────────────────────────
+    logger.info("=== Step 6: Web data.json ===")
+    _save_web_data(analysis, benchmark_chg, date_str)
+
+    # ── Step 7: Telegram notification ────────────────────────────────────────
+    logger.info("=== Step 7: Telegram ===")
     send_notification(analysis, benchmark_chg, date_str, report_path)
 
     return {

@@ -1,0 +1,197 @@
+{
+  "date": "20260609",
+  "benchmark_chg": -0.62,
+  "layers": [
+    {
+      "layer_id": "chip_memory",
+      "label": "💾 HBM / Memory",
+      "cake_layer": 2,
+      "avg_change": 6.49,
+      "avg_vol_ratio": 0.95,
+      "best_ticker": "SKHynix",
+      "best_pct": 15.91,
+      "worst_ticker": "MU",
+      "worst_pct": -5.4,
+      "top_stocks": [
+        {
+          "ticker": "000660.KS",
+          "display_name": "SKHynix",
+          "change_pct": 15.91
+        },
+        {
+          "ticker": "005930.KS",
+          "display_name": "Samsung",
+          "change_pct": 8.97
+        },
+        {
+          "ticker": "MU",
+          "display_name": "MU",
+          "change_pct": -5.4
+        }
+      ]
+    },
+    {
+      "layer_id": "energy",
+      "label": "⚡ Energy / Power",
+      "cake_layer": 1,
+      "avg_change": -0.78,
+      "avg_vol_ratio": 0.61,
+      "best_ticker": "CEG",
+      "best_pct": -0.06,
+      "worst_ticker": "VST",
+      "worst_pct": -1.5,
+      "top_stocks": [
+        {
+          "ticker": "CEG",
+          "display_name": "CEG",
+          "change_pct": -0.06
+        },
+        {
+          "ticker": "VST",
+          "display_name": "VST",
+          "change_pct": -1.5
+        }
+      ]
+    },
+    {
+      "layer_id": "chip_core",
+      "label": "🧠 GPU / ASIC",
+      "cake_layer": 2,
+      "avg_change": -1.22,
+      "avg_vol_ratio": 0.73,
+      "best_ticker": "TSM",
+      "best_pct": -0.54,
+      "worst_ticker": "AVGO",
+      "worst_pct": -2.02,
+      "top_stocks": [
+        {
+          "ticker": "TSM",
+          "display_name": "TSM",
+          "change_pct": -0.54
+        },
+        {
+          "ticker": "NVDA",
+          "display_name": "NVDA",
+          "change_pct": -1.09
+        },
+        {
+          "ticker": "AVGO",
+          "display_name": "AVGO",
+          "change_pct": -2.02
+        }
+      ]
+    },
+    {
+      "layer_id": "application_robotics",
+      "label": "🦾 Application / Robotics",
+      "cake_layer": 5,
+      "avg_change": -2.59,
+      "avg_vol_ratio": 0.4,
+      "best_ticker": "Rockwell",
+      "best_pct": 1.17,
+      "worst_ticker": "Yaskawa",
+      "worst_pct": -5.03,
+      "top_stocks": [
+        {
+          "ticker": "ROK",
+          "display_name": "Rockwell",
+          "change_pct": 1.17
+        },
+        {
+          "ticker": "ABBNY",
+          "display_name": "ABB",
+          "change_pct": -1.71
+        },
+        {
+          "ticker": "TSLA",
+          "display_name": "TSLA",
+          "change_pct": -3.31
+        }
+      ]
+    },
+    {
+      "layer_id": "chip_cpu",
+      "label": "🔲 CPU / SoC",
+      "cake_layer": 2,
+      "avg_change": -2.91,
+      "avg_vol_ratio": 1.04,
+      "best_ticker": "MediaTek",
+      "best_pct": 9.95,
+      "worst_ticker": "QCOM",
+      "worst_pct": -7.82,
+      "top_stocks": [
+        {
+          "ticker": "2454.TW",
+          "display_name": "MediaTek",
+          "change_pct": 9.95
+        },
+        {
+          "ticker": "INTC",
+          "display_name": "INTC",
+          "change_pct": -3.89
+        },
+        {
+          "ticker": "AMD",
+          "display_name": "AMD",
+          "change_pct": -5.14
+        }
+      ]
+    },
+    {
+      "layer_id": "model_software",
+      "label": "🤖 Model / Software",
+      "cake_layer": 4,
+      "avg_change": -4.86,
+      "avg_vol_ratio": 0.77,
+      "best_ticker": "PLTR",
+      "best_pct": -3.61,
+      "worst_ticker": "NOW",
+      "worst_pct": -6.66,
+      "top_stocks": [
+        {
+          "ticker": "PLTR",
+          "display_name": "PLTR",
+          "change_pct": -3.61
+        },
+        {
+          "ticker": "CRM",
+          "display_name": "CRM",
+          "change_pct": -4.3
+        },
+        {
+          "ticker": "NOW",
+          "display_name": "NOW",
+          "change_pct": -6.66
+        }
+      ]
+    },
+    {
+      "layer_id": "infra_cpo",
+      "label": "🔌 Networking / CPO",
+      "cake_layer": 3,
+      "avg_change": -8.54,
+      "avg_vol_ratio": 0.8,
+      "best_ticker": "ANET",
+      "best_pct": -3.6,
+      "worst_ticker": "COHR",
+      "worst_pct": -11.58,
+      "top_stocks": [
+        {
+          "ticker": "ANET",
+          "display_name": "ANET",
+          "change_pct": -3.6
+        },
+        {
+          "ticker": "LITE",
+          "display_name": "LITE",
+          "change_pct": -8.96
+        },
+        {
+          "ticker": "MRVL",
+          "display_name": "MRVL",
+          "change_pct": -10.01
+        }
+      ]
+    }
+  ]
+}
