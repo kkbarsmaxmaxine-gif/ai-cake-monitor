@@ -1,18 +1,186 @@
 {
   "date": "20260610",
-  "benchmark_chg": NaN,
+  "benchmark_chg": -1.62,
   "layers": [
+    {
+      "layer_id": "infra_cpo",
+      "label": "🔌 Networking / CPO",
+      "cake_layer": 3,
+      "avg_change": -0.53,
+      "avg_vol_ratio": 0.79,
+      "best_ticker": "LITE",
+      "best_pct": 3.83,
+      "worst_ticker": "MRVL",
+      "worst_pct": -5.35,
+      "top_stocks": [
+        {
+          "ticker": "LITE",
+          "display_name": "LITE",
+          "change_pct": 3.83
+        },
+        {
+          "ticker": "ANET",
+          "display_name": "ANET",
+          "change_pct": -0.26
+        },
+        {
+          "ticker": "COHR",
+          "display_name": "COHR",
+          "change_pct": -0.33
+        }
+      ]
+    },
+    {
+      "layer_id": "model_software",
+      "label": "🤖 Model / Software",
+      "cake_layer": 4,
+      "avg_change": -1.6,
+      "avg_vol_ratio": 0.74,
+      "best_ticker": "NOW",
+      "best_pct": -0.85,
+      "worst_ticker": "CRM",
+      "worst_pct": -2.53,
+      "top_stocks": [
+        {
+          "ticker": "NOW",
+          "display_name": "NOW",
+          "change_pct": -0.85
+        },
+        {
+          "ticker": "PLTR",
+          "display_name": "PLTR",
+          "change_pct": -1.41
+        },
+        {
+          "ticker": "CRM",
+          "display_name": "CRM",
+          "change_pct": -2.53
+        }
+      ]
+    },
+    {
+      "layer_id": "chip_core",
+      "label": "🧠 GPU / ASIC",
+      "cake_layer": 2,
+      "avg_change": -4.44,
+      "avg_vol_ratio": 0.81,
+      "best_ticker": "NVDA",
+      "best_pct": -3.73,
+      "worst_ticker": "AVGO",
+      "worst_pct": -5.12,
+      "top_stocks": [
+        {
+          "ticker": "NVDA",
+          "display_name": "NVDA",
+          "change_pct": -3.73
+        },
+        {
+          "ticker": "TSM",
+          "display_name": "TSM",
+          "change_pct": -4.48
+        },
+        {
+          "ticker": "AVGO",
+          "display_name": "AVGO",
+          "change_pct": -5.12
+        }
+      ]
+    },
+    {
+      "layer_id": "energy",
+      "label": "⚡ Energy / Power",
+      "cake_layer": 1,
+      "avg_change": -4.49,
+      "avg_vol_ratio": 1.25,
+      "best_ticker": "CEG",
+      "best_pct": -3.72,
+      "worst_ticker": "VST",
+      "worst_pct": -5.25,
+      "top_stocks": [
+        {
+          "ticker": "CEG",
+          "display_name": "CEG",
+          "change_pct": -3.72
+        },
+        {
+          "ticker": "VST",
+          "display_name": "VST",
+          "change_pct": -5.25
+        }
+      ]
+    },
+    {
+      "layer_id": "application_robotics",
+      "label": "🦾 Application / Robotics",
+      "cake_layer": 5,
+      "avg_change": -4.72,
+      "avg_vol_ratio": 0.55,
+      "best_ticker": "ABB",
+      "best_pct": -2.59,
+      "worst_ticker": "Yaskawa",
+      "worst_pct": -6.51,
+      "top_stocks": [
+        {
+          "ticker": "ABBNY",
+          "display_name": "ABB",
+          "change_pct": -2.59
+        },
+        {
+          "ticker": "TSLA",
+          "display_name": "TSLA",
+          "change_pct": -3.8
+        },
+        {
+          "ticker": "ROK",
+          "display_name": "Rockwell",
+          "change_pct": -4.43
+        }
+      ]
+    },
+    {
+      "layer_id": "chip_cpu",
+      "label": "🔲 CPU / SoC",
+      "cake_layer": 2,
+      "avg_change": -5.02,
+      "avg_vol_ratio": 0.91,
+      "best_ticker": "INTC",
+      "best_pct": -0.82,
+      "worst_ticker": "MediaTek",
+      "worst_pct": -7.15,
+      "top_stocks": [
+        {
+          "ticker": "INTC",
+          "display_name": "INTC",
+          "change_pct": -0.82
+        },
+        {
+          "ticker": "AMD",
+          "display_name": "AMD",
+          "change_pct": -4.86
+        },
+        {
+          "ticker": "ARM",
+          "display_name": "ARM",
+          "change_pct": -5.37
+        }
+      ]
+    },
     {
       "layer_id": "chip_memory",
       "label": "💾 HBM / Memory",
       "cake_layer": 2,
-      "avg_change": -6.8,
-      "avg_vol_ratio": 0.81,
-      "best_ticker": "Samsung",
-      "best_pct": -6.06,
+      "avg_change": -6.1,
+      "avg_vol_ratio": 0.3,
+      "best_ticker": "MU",
+      "best_pct": -4.7,
       "worst_ticker": "SKHynix",
       "worst_pct": -7.54,
       "top_stocks": [
+        {
+          "ticker": "MU",
+          "display_name": "MU",
+          "change_pct": -4.7
+        },
         {
           "ticker": "005930.KS",
           "display_name": "Samsung",
@@ -22,24 +190,6 @@
           "ticker": "000660.KS",
           "display_name": "SKHynix",
           "change_pct": -7.54
-        }
-      ]
-    },
-    {
-      "layer_id": "chip_cpu",
-      "label": "🔲 CPU / SoC",
-      "cake_layer": 2,
-      "avg_change": -7.15,
-      "avg_vol_ratio": 1.37,
-      "best_ticker": "MediaTek",
-      "best_pct": -7.15,
-      "worst_ticker": "MediaTek",
-      "worst_pct": -7.15,
-      "top_stocks": [
-        {
-          "ticker": "2454.TW",
-          "display_name": "MediaTek",
-          "change_pct": -7.15
         }
       ]
     }

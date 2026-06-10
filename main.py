@@ -42,17 +42,26 @@ def _setup_logging(level: str) -> logging.Logger:
 
 def _save_web_data(analysis: dict, benchmark_chg: float | None, date_str: str) -> None:
     """Write docs/data.json for the bubble-chart web dashboard."""
-    from config import LAYERS
+    import math
+
+    def _f(v):
+        """Convert float to JSON-safe value (NaN/Inf → None)."""
+        if v is None:
+            return None
+        try:
+            f = float(v)
+            return None if (math.isnan(f) or math.isinf(f)) else round(f, 2)
+        except (TypeError, ValueError):
+            return None
+
     layer_perf = analysis.get("layer_perf")
     resilience = analysis.get("resilience")
-    snapshot   = analysis.get("snapshot")
     if layer_perf is None or layer_perf.empty:
         return
 
     layers_out = []
     for _, row in layer_perf.iterrows():
         layer_id = row["layer_id"]
-        # Top 3 stocks by relative_strength within this layer
         top_stocks = []
         if resilience is not None and not resilience.empty:
             sub = resilience[resilience["layer"] == layer_id].head(3)
@@ -60,27 +69,24 @@ def _save_web_data(analysis: dict, benchmark_chg: float | None, date_str: str) -
                 top_stocks.append({
                     "ticker":       sr["ticker"],
                     "display_name": sr["display_name"],
-                    "change_pct":   round(float(sr["change_pct"]), 2)
-                                    if sr["change_pct"] == sr["change_pct"] else None,
+                    "change_pct":   _f(sr["change_pct"]),
                 })
         layers_out.append({
             "layer_id":      layer_id,
             "label":         row["layer_label"],
             "cake_layer":    int(row["cake_layer"]),
-            "avg_change":    round(float(row["avg_change"]), 2)
-                             if row["avg_change"] == row["avg_change"] else None,
-            "avg_vol_ratio": round(float(row["avg_vol_ratio"]), 2)
-                             if row["avg_vol_ratio"] == row["avg_vol_ratio"] else None,
+            "avg_change":    _f(row["avg_change"]),
+            "avg_vol_ratio": _f(row["avg_vol_ratio"]),
             "best_ticker":   row["best_ticker"],
-            "best_pct":      round(float(row["best_pct"]), 2),
+            "best_pct":      _f(row["best_pct"]),
             "worst_ticker":  row["worst_ticker"],
-            "worst_pct":     round(float(row["worst_pct"]), 2),
+            "worst_pct":     _f(row["worst_pct"]),
             "top_stocks":    top_stocks,
         })
 
     payload = {
         "date":          date_str,
-        "benchmark_chg": round(float(benchmark_chg), 2) if benchmark_chg is not None else None,
+        "benchmark_chg": _f(benchmark_chg),
         "layers":        layers_out,
     }
 
