@@ -89,16 +89,30 @@ def _pct(v) -> str:
         return "N/A"
 
 
-def build_message(analysis: dict, benchmark_chg: float | None, date_str: str) -> str:
+def build_message(
+    analysis:      dict,
+    benchmark_chg: float | None,
+    date_str:      str,
+    vix_level:     float | None = None,
+    vix_chg:       float | None = None,
+) -> str:
     layer_perf = analysis.get("layer_perf")
     narrative  = analysis.get("narrative", {})
     snapshot   = analysis.get("snapshot")
 
     bm = f"S&P500 {_pct(benchmark_chg)}" if benchmark_chg is not None else "S&P500 N/A"
 
+    if vix_level is not None:
+        mood = "極度恐慌" if vix_level >= 40 else ("恐慌" if vix_level >= 25 else ("警戒" if vix_level >= 18 else "平靜"))
+        vix_chg_str = f" {'+' if (vix_chg or 0) > 0 else ''}{vix_chg:.1f}%" if vix_chg is not None else ""
+        vix_line = f"VIX {vix_level:.1f}{vix_chg_str} [{mood}]"
+    else:
+        vix_line = "VIX N/A"
+
     lines = [
         f"📊 AI 五層蛋糕 {date_str}",
         f"基準: {bm}",
+        f"恐慌指數: {vix_line}",
         "",
     ]
 
@@ -152,6 +166,8 @@ def send_notification(
     benchmark_chg: float | None,
     date_str:      str,
     report_path:   Path | None = None,
+    vix_level:     float | None = None,
+    vix_chg:       float | None = None,
 ) -> None:
     token   = os.environ.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
@@ -160,7 +176,7 @@ def send_notification(
         logger.info("Telegram not configured (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set)")
         return
 
-    msg = build_message(analysis, benchmark_chg, date_str)
+    msg = build_message(analysis, benchmark_chg, date_str, vix_level, vix_chg)
     ok  = _post(token, "sendMessage", {
         "chat_id": chat_id,
         "text":    msg,
