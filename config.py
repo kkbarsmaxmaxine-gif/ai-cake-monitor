@@ -130,6 +130,7 @@ LAYERS: dict[str, dict] = {
 }
 
 BENCHMARK = "^GSPC"
+NASDAQ    = "^IXIC"
 VIX       = "^VIX"
 
 # Intraday interval for rebound calculation

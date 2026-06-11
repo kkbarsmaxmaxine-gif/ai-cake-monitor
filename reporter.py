@@ -57,6 +57,7 @@ def generate_report(
     date_str:       str,
     vix_level:      float | None = None,
     vix_chg:        float | None = None,
+    nasdaq_chg:     float | None = None,
 ) -> str:
     layer_perf = analysis["layer_perf"]
     resilience = analysis["resilience"]
@@ -65,7 +66,8 @@ def generate_report(
     snapshot   = analysis["snapshot"]
 
     now    = datetime.now().strftime("%Y-%m-%d %H:%M")
-    bm_str = f"S&P500 {_pct(benchmark_chg)}" if benchmark_chg is not None else "S&P500 N/A"
+    bm_str  = f"S&P500 {_pct(benchmark_chg)}" if benchmark_chg is not None else "S&P500 N/A"
+    ndq_str = f"NASDAQ {_pct(nasdaq_chg)}"    if nasdaq_chg  is not None else "NASDAQ N/A"
 
     if vix_level is not None:
         vix_emoji = "🔴" if (vix_chg or 0) > 0 else "🟢"
@@ -79,7 +81,7 @@ def generate_report(
 
     lines += [
         f"# AI 五層蛋糕 監控日報 — {date_str}",
-        f"> 產生時間: {now} | 基準: {bm_str} | {vix_str}",
+        f"> 產生時間: {now} | {bm_str} | {ndq_str} | {vix_str}",
         "",
         "---",
         "",
@@ -264,6 +266,7 @@ def generate_report(
 def print_terminal_summary(
     analysis:      dict,
     benchmark_chg: float | None,
+    nasdaq_chg:    float | None = None,
     vix_level:     float | None = None,
     vix_chg:       float | None = None,
 ) -> None:
@@ -272,12 +275,12 @@ def print_terminal_summary(
 
     print("\n" + "=" * 62)
     print("  AI 五層蛋糕 Monitor")
-    bm = f"  S&P500: {_pct(benchmark_chg)}" if benchmark_chg is not None else "  S&P500: N/A"
-    print(bm)
+    print(f"  S&P500:  {_pct(benchmark_chg)}" if benchmark_chg is not None else "  S&P500:  N/A")
+    print(f"  NASDAQ:  {_pct(nasdaq_chg)}"    if nasdaq_chg  is not None else "  NASDAQ:  N/A")
     if vix_level is not None:
         mood = "極度恐慌" if vix_level >= 40 else ("恐慌" if vix_level >= 25 else ("警戒" if vix_level >= 18 else "平靜"))
         vix_chg_str = f" ({'+' if (vix_chg or 0) > 0 else ''}{vix_chg:.1f}%)" if vix_chg is not None else ""
-        print(f"  VIX:    {vix_level:.1f}{vix_chg_str}  [{mood}]")
+        print(f"  VIX:     {vix_level:.1f}{vix_chg_str}  [{mood}]")
     print("=" * 62)
 
     if not layer_perf.empty:

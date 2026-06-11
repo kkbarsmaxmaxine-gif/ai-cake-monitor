@@ -24,7 +24,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from config import LAYERS, BENCHMARK, VIX, LOG_LEVEL
+from config import LAYERS, BENCHMARK, NASDAQ, VIX, LOG_LEVEL
 from fetcher import fetch_daily_data, fetch_intraday_data, build_snapshot
 from analyzer import build_full_analysis
 from reporter import generate_report, print_terminal_summary, save_report
@@ -126,7 +126,7 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
     logger = logging.getLogger("main")
 
     all_tickers, ticker_to_layer, ticker_labels = _build_ticker_maps()
-    all_with_bench = [BENCHMARK, VIX] + all_tickers
+    all_with_bench = [BENCHMARK, NASDAQ, VIX] + all_tickers
 
     # ── Step 1: Daily data ────────────────────────────────────────────────────
     logger.info("=== Step 1: Daily data ===")
@@ -157,6 +157,15 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
     logger.info("Benchmark (%s) change: %s", BENCHMARK,
                 f"{benchmark_chg:+.2f}%" if benchmark_chg is not None else "N/A")
 
+    nasdaq_chg: float | None = None
+    ndq_df = daily_data.get(NASDAQ)
+    if ndq_df is not None and len(ndq_df) >= 2:
+        n0 = float(ndq_df["close"].iloc[-2])
+        n1 = float(ndq_df["close"].iloc[-1])
+        if n0 != 0:
+            nasdaq_chg = round((n1 - n0) / n0 * 100, 2)
+    logger.info("NASDAQ change: %s", f"{nasdaq_chg:+.2f}%" if nasdaq_chg is not None else "N/A")
+
     vix_level: float | None = None
     vix_chg:   float | None = None
     vix_df = daily_data.get(VIX)
@@ -169,7 +178,7 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
 
     # ── Step 4: Build snapshot ────────────────────────────────────────────────
     logger.info("=== Step 3: Build snapshot ===")
-    stock_daily = {t: df for t, df in daily_data.items() if t not in (BENCHMARK, VIX)}
+    stock_daily = {t: df for t, df in daily_data.items() if t not in (BENCHMARK, NASDAQ, VIX)}
     snapshot = build_snapshot(stock_daily, intraday_data, ticker_to_layer, ticker_labels)
 
     if snapshot.empty:
@@ -184,9 +193,9 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
 
     # ── Step 6: Report ────────────────────────────────────────────────────────
     logger.info("=== Step 5: Report ===")
-    print_terminal_summary(analysis, benchmark_chg, vix_level, vix_chg)
+    print_terminal_summary(analysis, benchmark_chg, nasdaq_chg, vix_level, vix_chg)
 
-    report_md   = generate_report(analysis, benchmark_chg, date_str, vix_level, vix_chg)
+    report_md   = generate_report(analysis, benchmark_chg, date_str, vix_level, vix_chg, nasdaq_chg)
     report_path = save_report(report_md, date_str)
     logger.info("Report → %s", report_path)
 
@@ -196,12 +205,13 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
 
     # ── Step 7: Telegram notification ────────────────────────────────────────
     logger.info("=== Step 7: Telegram ===")
-    send_notification(analysis, benchmark_chg, date_str, report_path, vix_level, vix_chg)
+    send_notification(analysis, benchmark_chg, date_str, report_path, vix_level, vix_chg, nasdaq_chg)
 
     return {
         "snapshot":      snapshot,
         "analysis":      analysis,
         "benchmark_chg": benchmark_chg,
+        "nasdaq_chg":    nasdaq_chg,
         "vix_level":     vix_level,
         "vix_chg":       vix_chg,
         "report_path":   report_path,
