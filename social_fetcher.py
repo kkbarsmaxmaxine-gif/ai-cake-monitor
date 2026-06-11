@@ -26,9 +26,12 @@ _REDDIT_SUBS = [
 ]
 
 _NEWS_URLS = [
-    ("semianalysis", "https://semianalysis.com/"),
-    ("trendforce",   "https://www.trendforce.com/news/"),
-    ("eetimes",      "https://www.eetimes.com/"),
+    ("semianalysis",  "https://semianalysis.com/"),
+    ("trendforce",    "https://www.trendforce.com/news/"),
+    ("eetimes",       "https://www.eetimes.com/"),
+    ("tomshardware",  "https://www.tomshardware.com/news"),
+    ("theregister",   "https://www.theregister.com/"),
+    ("nikkei_asia",   "https://asia.nikkei.com/"),
 ]
 
 _UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
