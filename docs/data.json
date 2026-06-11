@@ -1,6 +1,9 @@
 {
   "date": "20260611",
   "benchmark_chg": -1.62,
+  "nasdaq_chg": -1.98,
+  "vix_level": 21.54,
+  "vix_chg": -3.06,
   "layers": [
     {
       "layer_id": "infra_cpo",

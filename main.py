@@ -40,7 +40,14 @@ def _setup_logging(level: str) -> logging.Logger:
     return logging.getLogger("main")
 
 
-def _save_web_data(analysis: dict, benchmark_chg: float | None, date_str: str) -> None:
+def _save_web_data(
+    analysis:      dict,
+    benchmark_chg: float | None,
+    date_str:      str,
+    nasdaq_chg:    float | None = None,
+    vix_level:     float | None = None,
+    vix_chg:       float | None = None,
+) -> None:
     """Write docs/data.json for the bubble-chart web dashboard."""
     import math
 
@@ -87,6 +94,9 @@ def _save_web_data(analysis: dict, benchmark_chg: float | None, date_str: str) -
     payload = {
         "date":          date_str,
         "benchmark_chg": _f(benchmark_chg),
+        "nasdaq_chg":    _f(nasdaq_chg),
+        "vix_level":     _f(vix_level),
+        "vix_chg":       _f(vix_chg),
         "layers":        layers_out,
     }
 
@@ -201,7 +211,7 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
 
     # ── Step 6: Generate web data.json ───────────────────────────────────────
     logger.info("=== Step 6: Web data.json ===")
-    _save_web_data(analysis, benchmark_chg, date_str)
+    _save_web_data(analysis, benchmark_chg, date_str, nasdaq_chg, vix_level, vix_chg)
 
     # ── Step 7: Telegram notification ────────────────────────────────────────
     logger.info("=== Step 7: Telegram ===")

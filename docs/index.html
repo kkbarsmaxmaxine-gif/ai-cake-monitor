@@ -24,7 +24,21 @@
   }
   header h1 { font-size: 1.15rem; font-weight: 600; }
   #date-label { font-size: 0.82rem; color: #8b949e; }
-  #bm-label   { font-size: 0.82rem; margin-left: auto; }
+  .index-group {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+    align-items: center;
+  }
+  .index-group span {
+    font-size: 0.80rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 6px;
+    background: #161b22;
+    border: 1px solid #21262d;
+  }
+  #vix-label { font-size: 0.76rem !important; }
 
   .state-legend {
     display: flex;
@@ -146,7 +160,11 @@
 <header>
   <h1>🎂 AI 五層蛋糕 輪動監控</h1>
   <span id="date-label">載入中…</span>
-  <span id="bm-label"></span>
+  <div class="index-group">
+    <span id="bm-label"></span>
+    <span id="ndq-label"></span>
+    <span id="vix-label"></span>
+  </div>
 </header>
 
 <div class="state-legend">
@@ -193,11 +211,29 @@ fetch('data.json?t=' + Date.now())
   .then(r => r.json())
   .then(data => {
     document.getElementById('date-label').textContent = data.date || '';
+
     const bm = data.benchmark_chg;
     const bmEl = document.getElementById('bm-label');
     if (bm != null) {
       bmEl.textContent = 'S&P500 ' + pct(bm);
       bmEl.style.color = bm >= 0 ? '#3fb950' : '#f85149';
+    }
+
+    const ndq = data.nasdaq_chg;
+    const ndqEl = document.getElementById('ndq-label');
+    if (ndq != null) {
+      ndqEl.textContent = 'NASDAQ ' + pct(ndq);
+      ndqEl.style.color = ndq >= 0 ? '#3fb950' : '#f85149';
+    }
+
+    const vix = data.vix_level;
+    const vixChg = data.vix_chg;
+    const vixEl = document.getElementById('vix-label');
+    if (vix != null) {
+      const mood = vix >= 40 ? '極度恐慌' : vix >= 25 ? '恐慌' : vix >= 18 ? '警戒' : '平靜';
+      const vixChgStr = vixChg != null ? ' (' + (vixChg > 0 ? '+' : '') + vixChg.toFixed(1) + '%)' : '';
+      vixEl.textContent = 'VIX ' + vix.toFixed(1) + vixChgStr + ' ' + mood;
+      vixEl.style.color = vixChg > 0 ? '#f85149' : '#3fb950';
     }
 
     const layers = data.layers || [];
