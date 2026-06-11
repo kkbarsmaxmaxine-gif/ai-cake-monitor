@@ -124,6 +124,13 @@
   }
   .stock-row .ticker { color: #c9d1d9; }
 
+  .buzz-row {
+    font-size: 0.72rem;
+    color: #8b949e;
+    margin-top: 5px;
+  }
+  .buzz-row .buzz-val { color: #e3b341; font-weight: 600; }
+
   /* tooltip */
   #tooltip {
     position: fixed;
@@ -207,10 +214,24 @@ function getState(vs_sp) {
   return 'receding';
 }
 
-fetch('data.json?t=' + Date.now())
-  .then(r => r.json())
-  .then(data => {
-    document.getElementById('date-label').textContent = data.date || '';
+const t = Date.now();
+Promise.all([
+  fetch('data.json?t=' + t).then(r => r.json()),
+  fetch('social_buzz.json?t=' + t).then(r => r.json()).catch(() => ({})),
+]).then(([data, preBuzz]) => {
+  // Prefer post-market buzz (in data.json); fall back to pre-market snapshot
+  if (!data.social_buzz || !(data.social_buzz.sources || []).length) {
+    data.social_buzz = preBuzz;
+    // Inject buzz_total into layers from the pre-market file
+    const byLayer = (preBuzz.by_layer) || {};
+    (data.layers || []).forEach(layer => {
+      const lb = byLayer[layer.layer_id] || {};
+      layer.buzz_total = lb.total || 0;
+      layer.buzz_top   = lb.top_ticker || '';
+    });
+  }
+
+  document.getElementById('date-label').textContent = data.date || '';
 
     const bm = data.benchmark_chg;
     const bmEl = document.getElementById('bm-label');
@@ -318,12 +339,18 @@ fetch('data.json?t=' + Date.now())
     });
 
     // ── Side panel ────────────────────────────────────────────────────────
-    const list = document.getElementById('layer-list');
-    const sorted = [...layers].sort((a, b) => b.avg_change - a.avg_change);
+    const list    = document.getElementById('layer-list');
+    const buzzSrc = (data.social_buzz && data.social_buzz.sources || []).join('+');
+    const sorted  = [...layers].sort((a, b) => b.avg_change - a.avg_change);
     sorted.forEach(layer => {
       const vs    = bm != null ? (layer.avg_change - bm) : layer.avg_change;
       const state = getState(vs);
       const chgCls = layer.avg_change >= 0 ? 'pos' : 'neg';
+
+      const buzzTotal = layer.buzz_total || 0;
+      const buzzHtml  = buzzTotal > 0
+        ? `<div class="buzz-row">🔥 <span class="buzz-val">${buzzTotal}</span> 則討論${layer.buzz_top ? '  ·  ' + layer.buzz_top : ''}</div>`
+        : '';
 
       const card = document.createElement('div');
       card.className = 'layer-card';
@@ -336,6 +363,7 @@ fetch('data.json?t=' + Date.now())
           <span class="state-badge badge-${state}">${STATE_LABEL[state]}</span>
           <span style="font-size:.75rem;color:#8b949e">vs S&P ${pct(vs)}</span>
         </div>
+        ${buzzHtml}
         <div class="stock-list">
           ${(layer.top_stocks || []).map(s => {
             const sc = s.change_pct >= 0 ? '#3fb950' : '#f85149';
@@ -348,9 +376,9 @@ fetch('data.json?t=' + Date.now())
       list.appendChild(card);
     });
   })
-  .catch(err => {
-    document.getElementById('date-label').textContent = '資料載入失敗: ' + err.message;
-  });
+}).catch(err => {
+  document.getElementById('date-label').textContent = '資料載入失敗: ' + err.message;
+});
 </script>
 </body>
 </html>

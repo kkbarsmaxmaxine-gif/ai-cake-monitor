@@ -29,6 +29,7 @@ from fetcher import fetch_daily_data, fetch_intraday_data, build_snapshot
 from analyzer import build_full_analysis
 from reporter import generate_report, print_terminal_summary, save_report
 from notifier import send_notification
+from social_fetcher import build_buzz
 
 
 def _setup_logging(level: str) -> logging.Logger:
@@ -47,6 +48,7 @@ def _save_web_data(
     nasdaq_chg:    float | None = None,
     vix_level:     float | None = None,
     vix_chg:       float | None = None,
+    buzz:          dict | None  = None,
 ) -> None:
     """Write docs/data.json for the bubble-chart web dashboard."""
     import math
@@ -78,6 +80,7 @@ def _save_web_data(
                     "display_name": sr["display_name"],
                     "change_pct":   _f(sr["change_pct"]),
                 })
+        layer_buzz = (buzz or {}).get("by_layer", {}).get(layer_id, {})
         layers_out.append({
             "layer_id":      layer_id,
             "label":         row["layer_label"],
@@ -89,6 +92,8 @@ def _save_web_data(
             "worst_ticker":  row["worst_ticker"],
             "worst_pct":     _f(row["worst_pct"]),
             "top_stocks":    top_stocks,
+            "buzz_total":    layer_buzz.get("total", 0),
+            "buzz_top":      layer_buzz.get("top_ticker", ""),
         })
 
     payload = {
@@ -98,6 +103,7 @@ def _save_web_data(
         "vix_level":     _f(vix_level),
         "vix_chg":       _f(vix_chg),
         "layers":        layers_out,
+        "social_buzz":   buzz or {},
     }
 
     docs_dir = Path(__file__).parent / "docs"
@@ -209,13 +215,17 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
     report_path = save_report(report_md, date_str)
     logger.info("Report → %s", report_path)
 
-    # ── Step 6: Generate web data.json ───────────────────────────────────────
-    logger.info("=== Step 6: Web data.json ===")
-    _save_web_data(analysis, benchmark_chg, date_str, nasdaq_chg, vix_level, vix_chg)
+    # ── Step 6: Social buzz ───────────────────────────────────────────────────
+    logger.info("=== Step 6: Social buzz ===")
+    buzz = build_buzz(all_tickers, ticker_labels, ticker_to_layer)
 
-    # ── Step 7: Telegram notification ────────────────────────────────────────
-    logger.info("=== Step 7: Telegram ===")
-    send_notification(analysis, benchmark_chg, date_str, report_path, vix_level, vix_chg, nasdaq_chg)
+    # ── Step 7: Generate web data.json ───────────────────────────────────────
+    logger.info("=== Step 7: Web data.json ===")
+    _save_web_data(analysis, benchmark_chg, date_str, nasdaq_chg, vix_level, vix_chg, buzz)
+
+    # ── Step 8: Telegram notification ────────────────────────────────────────
+    logger.info("=== Step 8: Telegram ===")
+    send_notification(analysis, benchmark_chg, date_str, report_path, vix_level, vix_chg, nasdaq_chg, buzz)
 
     return {
         "snapshot":      snapshot,
@@ -225,6 +235,7 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
         "vix_level":     vix_level,
         "vix_chg":       vix_chg,
         "report_path":   report_path,
+        "buzz":          buzz,
     }
 
 

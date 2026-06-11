@@ -1,0 +1,50 @@
+name: AI Cake Monitor — Pre-Market Social Buzz
+
+on:
+  # 13:00 UTC = 9:00 AM ET (1h before US open)
+  schedule:
+    - cron: "0 13 * * 1-5"
+
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  social-buzz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch social buzz
+        env:
+          REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          YOUTUBE_API_KEY:      ${{ secrets.YOUTUBE_API_KEY }}
+        run: python social_only.py
+
+      - name: Commit social_buzz.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/social_buzz.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: pre-market social buzz $(date -u +%Y%m%d-%H%M)"
+            git push
+          fi
