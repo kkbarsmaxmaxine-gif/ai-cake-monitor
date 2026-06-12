@@ -152,6 +152,23 @@ def run(date_str: str, skip_intraday: bool = False) -> dict:
         logger.error("No daily data returned — check internet / market hours")
         return {}
 
+    # Auto-correct date_str to the actual last market date in the fetched data.
+    # Yahoo Finance can take 4-6 h to finalize daily bars; running at 22:00 UTC
+    # (6 PM EDT) sometimes returns yesterday's data.  Use the real last-row date.
+    for _t in all_tickers:
+        _df = daily_data.get(_t)
+        if _df is not None and not _df.empty:
+            import pandas as _pd
+            _market_date = _pd.Timestamp(_df.index[-1]).strftime("%Y%m%d")
+            if _market_date != date_str:
+                logger.warning(
+                    "Data date mismatch: cron date=%s but latest data date=%s "
+                    "— using %s (Yahoo Finance data lag)",
+                    date_str, _market_date, _market_date,
+                )
+                date_str = _market_date
+            break
+
     # ── Step 2: Intraday data (optional) ─────────────────────────────────────
     logger.info("=== Step 2: Intraday data ===")
     intraday_data: dict = {}

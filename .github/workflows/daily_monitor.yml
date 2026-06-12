@@ -1,9 +1,9 @@
 name: AI Cake Monitor — Daily Run
 
 on:
-  # Weekdays at 22:00 UTC = 6 PM EDT / 5 PM EST (after US market close)
+  # Tue-Sat at 02:00 UTC = 10 PM EDT Mon-Fri (gives Yahoo Finance 6 h after close)
   schedule:
-    - cron: "0 22 * * 1-5"
+    - cron: "0 2 * * 2-6"
 
   # Allow manual trigger from Actions tab (useful for testing or re-running)
   workflow_dispatch:
