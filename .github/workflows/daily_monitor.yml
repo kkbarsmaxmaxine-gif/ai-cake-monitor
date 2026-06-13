@@ -77,7 +77,7 @@ jobs:
 
           DATE=${{ steps.monitor.outputs.date }}
 
-          git add -A output/ docs/data.json
+          git add -A
 
           if git diff --cached --quiet; then
             echo "Nothing to commit (report unchanged)."
