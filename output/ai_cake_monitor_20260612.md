@@ -1,5 +1,5 @@
 # AI 五層蛋糕 監控日報 — 20260612
-> 產生時間: 2026-06-12 11:55 | S&P500 +1.75% | NASDAQ +2.54% | 🟢 VIX 18.9 (-2.6%) [警戒]
+> 產生時間: 2026-06-13 22:19 | S&P500 +0.50% | NASDAQ +0.31% | 🟢 VIX 17.7 (-9.1%) [平靜]
 
 ---
 
@@ -9,19 +9,19 @@
 
 | # | 蛋糕層 | 均漲跌 | 趨勢 | 最強個股 | 最弱個股 | Vol倍率 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 🛰️ Satellite / LEO | **+11.14%** | `██████████` | Viasat (+18.23%) | Globalstar (+1.00%) | 1.36x |
-| 2 | 💾 HBM / Memory | **+8.50%** | `██████████` | Lam Research (+12.65%) | SKHynix (+2.33%) | 1.10x |
-| 3 | 🔲 CPU / SoC | **+6.96%** | `██████████` | ARM (+11.32%) | MediaTek (+2.33%) | 0.98x |
-| 4 | 🧠 GPU / ASIC | **+5.32%** | `██████████` | ASML (+9.53%) | NVDA (+2.22%) | 0.92x |
-| 5 | 🦾 Industrial Robotics | **+5.30%** | `██████████` | FANUC (+6.60%) | Rockwell (+3.98%) | 1.29x |
-| 6 | 🔌 Networking / CPO | **+4.67%** | `██████████` | MRVL (+11.13%) | Ciena (+2.43%) | 0.72x |
-| 7 | ⚡ Energy / Power | **+4.10%** | `█████████░` | FSLR (+8.79%) | NEE (-0.33%) | 1.14x |
-| 8 | 🤖 Humanoid / AI Robots | **+3.81%** | `█████████░` | Teradyne (+9.73%) | UiPath (-0.93%) | 1.07x |
-| 9 | 📱 Consumer Electronics | **+0.89%** | `██████░░░░` | Shopify (+2.10%) | Netflix (-0.89%) | 0.94x |
-| 10 | 🤖 Model / Software | **-1.34%** | `████░░░░░░` | PLTR (+0.67%) | NOW (-2.81%) | 1.08x |
+| 1 | 🔲 CPU / SoC | **+5.38%** | `██████████` | ARM (+11.27%) | MediaTek (+2.33%) | 0.86x |
+| 2 | 💾 HBM / Memory | **+3.26%** | `████████░░` | Samsung (+7.86%) | MU (-1.43%) | 0.89x |
+| 3 | 🔌 Networking / CPO | **+2.73%** | `████████░░` | COHR (+5.90%) | MRVL (-0.36%) | 0.70x |
+| 4 | ⚡ Energy / Power | **+1.53%** | `███████░░░` | GE Vernova (+3.74%) | FSLR (-1.42%) | 0.85x |
+| 5 | 🤖 Humanoid / AI Robots | **+1.11%** | `██████░░░░` | Teradyne (+5.72%) | UiPath (-0.94%) | 0.88x |
+| 6 | 🦾 Industrial Robotics | **+0.62%** | `██████░░░░` | Yaskawa (+3.42%) | ABB (-2.18%) | 0.84x |
+| 7 | 🧠 GPU / ASIC | **+0.55%** | `██████░░░░` | AMD (+4.73%) | ASML (-1.89%) | 0.77x |
+| 8 | 🤖 Model / Software | **-0.75%** | `████░░░░░░` | MSFT (+0.10%) | PLTR (-2.36%) | 0.95x |
+| 9 | 📱 Consumer Electronics | **-1.08%** | `████░░░░░░` | Alphabet (+0.53%) | Shopify (-2.02%) | 0.94x |
+| 10 | 🛰️ Satellite / LEO | **-8.57%** | `░░░░░░░░░░` | Globalstar (+0.06%) | AST SpaceMobile (-15.53%) | 1.88x |
 
-> 🏆 **最強層**: 🛰️ Satellite / LEO — 均漲 **+11.14%**
-> 💀 **最弱層**: 🤖 Model / Software — 均跌 **-1.34%**
+> 🏆 **最強層**: 🔲 CPU / SoC — 均漲 **+5.38%**
+> 💀 **最弱層**: 🛰️ Satellite / LEO — 均跌 **-8.57%**
 
 ## Q3 各層抗跌冠軍
 
@@ -29,55 +29,56 @@
 
 | 層 | 排名 | 個股 | 漲跌 | 相對強弱 | Vol倍率 |
 | --- | --- | --- | --- | --- | --- |
-| ⚡ Energy / Power | 🥇 | **FSLR** | +8.79% | +4.69% | 0.86x |
-| ⚡ Energy / Power | 🥈 | **VST** | +5.66% | +1.56% | 1.33x |
-| ⚡ Energy / Power | 🥉 | **GE Vernova** | +4.58% | +0.48% | 1.31x |
-| ⚡ Energy / Power |   4 | **CEG** | +1.82% | -2.28% | 1.35x |
-| ⚡ Energy / Power |   5 | **NEE** | -0.33% | -4.43% | 0.83x |
-| 🧠 GPU / ASIC | 🥇 | **ASML** | +9.53% | +4.21% | 1.15x |
-| 🧠 GPU / ASIC | 🥈 | **AMD** | +7.97% | +2.65% | 0.91x |
-| 🧠 GPU / ASIC | 🥉 | **AVGO** | +3.62% | -1.70% | 0.72x |
-| 🧠 GPU / ASIC |   4 | **TSM** | +3.26% | -2.06% | 0.90x |
-| 🧠 GPU / ASIC |   5 | **NVDA** | +2.22% | -3.10% | 0.91x |
-| 💾 HBM / Memory | 🥇 | **Lam Research** | +12.65% | +4.15% | 1.21x |
-| 💾 HBM / Memory | 🥈 | **MU** | +11.66% | +3.16% | 0.93x |
-| 💾 HBM / Memory | 🥉 | **Western Digital** | +8.00% | -0.50% | 0.90x |
-| 💾 HBM / Memory |   4 | **Samsung** | +7.86% | -0.64% | 1.27x |
-| 💾 HBM / Memory |   5 | **SKHynix** | +2.33% | -6.17% | 1.19x |
-| 🔲 CPU / SoC | 🥇 | **ARM** | +11.32% | +4.36% | 0.77x |
-| 🔲 CPU / SoC | 🥈 | **INTC** | +9.27% | +2.31% | 1.48x |
-| 🔲 CPU / SoC | 🥉 | **QCOM** | +6.15% | -0.81% | 0.91x |
-| 🔲 CPU / SoC |   4 | **Microchip** | +5.72% | -1.24% | 1.12x |
-| 🔲 CPU / SoC |   5 | **MediaTek** | +2.33% | -4.63% | 0.60x |
-| 🔌 Networking / CPO | 🥇 | **MRVL** | +11.13% | +6.46% | 0.69x |
-| 🔌 Networking / CPO | 🥈 | **LITE** | +4.26% | -0.41% | 0.71x |
-| 🔌 Networking / CPO | 🥉 | **ANET** | +3.06% | -1.61% | 0.67x |
-| 🔌 Networking / CPO |   4 | **COHR** | +2.48% | -2.19% | 1.01x |
-| 🔌 Networking / CPO |   5 | **Ciena** | +2.43% | -2.24% | 0.51x |
-| 🤖 Model / Software | 🥇 | **PLTR** | +0.67% | +2.01% | 0.78x |
-| 🤖 Model / Software | 🥈 | **META** | -0.45% | +0.89% | 0.84x |
-| 🤖 Model / Software | 🥉 | **MSFT** | -1.77% | -0.43% | 1.46x |
-| 🤖 Model / Software |   4 | **CRM** | -2.36% | -1.02% | 1.28x |
-| 🤖 Model / Software |   5 | **NOW** | -2.81% | -1.47% | 1.04x |
-| 🦾 Industrial Robotics | 🥇 | **FANUC** | +6.60% | +1.30% | 1.07x |
-| 🦾 Industrial Robotics | 🥈 | **ABB** | +6.04% | +0.74% | 2.27x |
-| 🦾 Industrial Robotics | 🥉 | **TSLA** | +4.60% | -0.70% | 0.87x |
-| 🦾 Industrial Robotics |   4 | **Rockwell** | +3.98% | -1.32% | 0.96x |
-| 🤖 Humanoid / AI Robots | 🥇 | **Teradyne** | +9.73% | +5.92% | 1.22x |
-| 🤖 Humanoid / AI Robots | 🥈 | **Honeywell** | +6.43% | +2.62% | 1.35x |
-| 🤖 Humanoid / AI Robots | 🥉 | **Emerson** | +3.63% | -0.18% | 0.89x |
-| 🤖 Humanoid / AI Robots |   4 | **Intuitive Surgical** | +0.21% | -3.60% | 0.86x |
-| 🤖 Humanoid / AI Robots |   5 | **UiPath** | -0.93% | -4.74% | 1.04x |
-| 🛰️ Satellite / LEO | 🥇 | **Viasat** | +18.23% | +7.09% | 1.20x |
-| 🛰️ Satellite / LEO | 🥈 | **Intuitive Machines** | +15.47% | +4.33% | 1.92x |
-| 🛰️ Satellite / LEO | 🥉 | **AST SpaceMobile** | +11.73% | +0.59% | 1.24x |
-| 🛰️ Satellite / LEO |   4 | **Rocket Lab** | +9.26% | -1.88% | 1.33x |
-| 🛰️ Satellite / LEO |   5 | **Globalstar** | +1.00% | -10.14% | 1.12x |
-| 📱 Consumer Electronics | 🥇 | **Shopify** | +2.10% | +1.21% | 1.10x |
-| 📱 Consumer Electronics | 🥈 | **AMZN** | +1.47% | +0.58% | 0.99x |
-| 📱 Consumer Electronics | 🥉 | **AAPL** | +1.39% | +0.50% | 0.68x |
-| 📱 Consumer Electronics |   4 | **Alphabet** | +0.39% | -0.50% | 1.03x |
-| 📱 Consumer Electronics |   5 | **Netflix** | -0.89% | -1.78% | 0.89x |
+| ⚡ Energy / Power | 🥇 | **GE Vernova** | +3.74% | +2.21% | 0.76x |
+| ⚡ Energy / Power | 🥈 | **CEG** | +2.86% | +1.33% | 0.83x |
+| ⚡ Energy / Power | 🥉 | **NEE** | +1.36% | -0.17% | 0.97x |
+| ⚡ Energy / Power |   4 | **VST** | +1.12% | -0.41% | 1.07x |
+| ⚡ Energy / Power |   5 | **FSLR** | -1.42% | -2.95% | 0.64x |
+| 🧠 GPU / ASIC | 🥇 | **AMD** | +4.73% | +4.18% | 0.94x |
+| 🧠 GPU / ASIC | 🥈 | **TSM** | +0.68% | +0.13% | 0.65x |
+| 🧠 GPU / ASIC | 🥉 | **NVDA** | +0.16% | -0.39% | 0.65x |
+| 🧠 GPU / ASIC |   4 | **AVGO** | -0.91% | -1.46% | 0.69x |
+| 🧠 GPU / ASIC |   5 | **ASML** | -1.89% | -2.44% | 0.94x |
+| 💾 HBM / Memory | 🥇 | **Samsung** | +7.86% | +4.60% | 1.16x |
+| 💾 HBM / Memory | 🥈 | **Western Digital** | +6.36% | +3.10% | 0.90x |
+| 💾 HBM / Memory | 🥉 | **SKHynix** | +2.33% | -0.93% | 1.06x |
+| 💾 HBM / Memory |   4 | **Lam Research** | +1.18% | -2.08% | 0.68x |
+| 💾 HBM / Memory |   5 | **MU** | -1.43% | -4.69% | 0.64x |
+| 🔲 CPU / SoC | 🥇 | **ARM** | +11.27% | +5.89% | 1.52x |
+| 🔲 CPU / SoC | 🥈 | **INTC** | +6.51% | +1.13% | 1.02x |
+| 🔲 CPU / SoC | 🥉 | **QCOM** | +4.32% | -1.06% | 0.65x |
+| 🔲 CPU / SoC |   4 | **Microchip** | +2.47% | -2.91% | 0.56x |
+| 🔲 CPU / SoC |   5 | **MediaTek** | +2.33% | -3.05% | 0.57x |
+| 🔌 Networking / CPO | 🥇 | **COHR** | +5.90% | +3.17% | 0.83x |
+| 🔌 Networking / CPO | 🥈 | **ANET** | +4.37% | +1.64% | 0.87x |
+| 🔌 Networking / CPO | 🥉 | **LITE** | +3.59% | +0.86% | 0.73x |
+| 🔌 Networking / CPO |   4 | **Ciena** | +0.17% | -2.56% | 0.54x |
+| 🔌 Networking / CPO |   5 | **MRVL** | -0.36% | -3.09% | 0.55x |
+| 🤖 Model / Software | 🥇 | **MSFT** | +0.10% | +0.85% | 0.96x |
+| 🤖 Model / Software | 🥈 | **META** | -0.26% | +0.49% | 0.71x |
+| 🤖 Model / Software | 🥉 | **CRM** | -0.34% | +0.41% | 1.01x |
+| 🤖 Model / Software |   4 | **NOW** | -0.90% | -0.15% | 0.96x |
+| 🤖 Model / Software |   5 | **PLTR** | -2.36% | -1.61% | 1.09x |
+| 🦾 Industrial Robotics | 🥇 | **Yaskawa** | +3.42% | +2.80% | 0.72x |
+| 🦾 Industrial Robotics | 🥈 | **TSLA** | +1.82% | +1.20% | 1.18x |
+| 🦾 Industrial Robotics | 🥉 | **Rockwell** | +0.38% | -0.24% | 0.82x |
+| 🦾 Industrial Robotics |   4 | **FANUC** | -0.32% | -0.94% | 0.32x |
+| 🦾 Industrial Robotics |   5 | **ABB** | -2.18% | -2.80% | 1.18x |
+| 🤖 Humanoid / AI Robots | 🥇 | **Teradyne** | +5.72% | +4.61% | 0.77x |
+| 🤖 Humanoid / AI Robots | 🥈 | **Emerson** | +0.69% | -0.42% | 0.94x |
+| 🤖 Humanoid / AI Robots | 🥉 | **Honeywell** | +0.54% | -0.57% | 0.95x |
+| 🤖 Humanoid / AI Robots |   4 | **Intuitive Surgical** | -0.45% | -1.56% | 0.79x |
+| 🤖 Humanoid / AI Robots |   5 | **UiPath** | -0.94% | -2.05% | 0.93x |
+| 🛰️ Satellite / LEO | 🥇 | **Globalstar** | +0.06% | +8.63% | 0.79x |
+| 🛰️ Satellite / LEO | 🥈 | **Viasat** | -3.49% | +5.08% | 1.11x |
+| 🛰️ Satellite / LEO | 🥉 | **Rocket Lab** | -10.79% | -2.22% | 3.22x |
+| 🛰️ Satellite / LEO |   4 | **Intuitive Machines** | -13.12% | -4.55% | 1.66x |
+| 🛰️ Satellite / LEO |   5 | **AST SpaceMobile** | -15.53% | -6.96% | 2.60x |
+| 📱 Consumer Electronics | 🥇 | **Alphabet** | +0.53% | +1.61% | 0.76x |
+| 📱 Consumer Electronics | 🥈 | **Netflix** | -1.14% | -0.06% | 0.98x |
+| 📱 Consumer Electronics | 🥉 | **AMZN** | -1.23% | -0.15% | 1.20x |
+| 📱 Consumer Electronics |   4 | **AAPL** | -1.52% | -0.44% | 0.63x |
+| 📱 Consumer Electronics |   5 | **Shopify** | -2.02% | -0.94% | 1.14x |
 
 ## Q4 從日內低點反彈最快
 
@@ -85,24 +86,24 @@
 
 | # | 個股 | 層 | rebound_ratio | rebound_pct | 今日漲跌 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | **MU** | 💾 HBM / Memory | 0.990 | +11.18% | +11.66% |
-| 2 | **Shopify** | 📱 Consumer Electronics | 0.983 | +6.10% | +2.10% |
-| 3 | **Teradyne** | 🤖 Humanoid / AI Robots | 0.983 | +6.87% | +9.73% |
-| 4 | **Viasat** | 🛰️ Satellite / LEO | 0.980 | +16.79% | +18.23% |
-| 5 | **Western Digital** | 💾 HBM / Memory | 0.980 | +8.16% | +8.00% |
-| 6 | **LITE** | 🔌 Networking / CPO | 0.977 | +5.83% | +4.26% |
-| 7 | **Rocket Lab** | 🛰️ Satellite / LEO | 0.972 | +8.89% | +9.26% |
-| 8 | **TSLA** | 🦾 Industrial Robotics | 0.971 | +4.82% | +4.60% |
-| 9 | **Honeywell** | 🤖 Humanoid / AI Robots | 0.968 | +5.76% | +6.43% |
-| 10 | **ASML** | 🧠 GPU / ASIC | 0.967 | +6.99% | +9.53% |
+| 1 | **TSLA** | 🦾 Industrial Robotics | 0.988 | +5.09% | +1.82% |
+| 2 | **NEE** | ⚡ Energy / Power | 0.934 | +1.25% | +1.36% |
+| 3 | **CRM** | 🤖 Model / Software | 0.901 | +2.87% | -0.34% |
+| 4 | **MSFT** | 🤖 Model / Software | 0.898 | +2.20% | +0.10% |
+| 5 | **GE Vernova** | ⚡ Energy / Power | 0.897 | +3.58% | +3.74% |
+| 6 | **Microchip** | 🔲 CPU / SoC | 0.874 | +3.61% | +2.47% |
+| 7 | **ARM** | 🔲 CPU / SoC | 0.853 | +8.69% | +11.27% |
+| 8 | **Teradyne** | 🤖 Humanoid / AI Robots | 0.831 | +6.12% | +5.72% |
+| 9 | **LITE** | 🔌 Networking / CPO | 0.817 | +6.75% | +3.59% |
+| 10 | **CEG** | ⚡ Energy / Power | 0.813 | +2.45% | +2.86% |
 
 ## Q5 市場現在交易哪個敘事？
 
-### 🎯 當前主線: **🦾 Application**
+### 🎯 當前主線: **🧠 Silicon (Chips)**
 
-- 🔥 **最強層**: 🛰️ Satellite / LEO (均漲 +11.14%)
-- 🥶 **最弱層**: 🤖 Model / Software (均跌 -1.34%)
-- 💰 **資金流入**: 🛰️ Satellite / LEO (Vol倍率 1.36x)
+- 🔥 **最強層**: 🔲 CPU / SoC (均漲 +5.38%)
+- 🥶 **最弱層**: 🛰️ Satellite / LEO (均跌 -8.57%)
+- 💰 **資金流入**: 🛰️ Satellite / LEO (Vol倍率 1.88x)
 
 > ✅ **強訊號** — 領先層明顯跑贏，資金方向清晰
 
@@ -110,71 +111,72 @@
 
 | 層 | 均漲跌 | vs S&P | 方向 |
 | --- | --- | --- | --- |
-| 🛰️ Satellite / LEO | +11.14% | +9.39% | ↑ 跑贏 |
-| 💾 HBM / Memory | +8.50% | +6.75% | ↑ 跑贏 |
-| 🔲 CPU / SoC | +6.96% | +5.21% | ↑ 跑贏 |
-| 🧠 GPU / ASIC | +5.32% | +3.57% | ↑ 跑贏 |
-| 🦾 Industrial Robotics | +5.30% | +3.55% | ↑ 跑贏 |
-| 🔌 Networking / CPO | +4.67% | +2.92% | ↑ 跑贏 |
-| ⚡ Energy / Power | +4.10% | +2.35% | ↑ 跑贏 |
-| 🤖 Humanoid / AI Robots | +3.81% | +2.06% | ↑ 跑贏 |
-| 📱 Consumer Electronics | +0.89% | -0.86% | ↓ 跑輸 |
-| 🤖 Model / Software | -1.34% | -3.09% | ↓ 跑輸 |
+| 🔲 CPU / SoC | +5.38% | +4.88% | ↑ 跑贏 |
+| 💾 HBM / Memory | +3.26% | +2.76% | ↑ 跑贏 |
+| 🔌 Networking / CPO | +2.73% | +2.23% | ↑ 跑贏 |
+| ⚡ Energy / Power | +1.53% | +1.03% | ↑ 跑贏 |
+| 🤖 Humanoid / AI Robots | +1.11% | +0.61% | ↑ 跑贏 |
+| 🦾 Industrial Robotics | +0.62% | +0.12% | → 持平 |
+| 🧠 GPU / ASIC | +0.55% | +0.05% | → 持平 |
+| 🤖 Model / Software | -0.75% | -1.25% | ↓ 跑輸 |
+| 📱 Consumer Electronics | -1.08% | -1.58% | ↓ 跑輸 |
+| 🛰️ Satellite / LEO | -8.57% | -9.07% | ↓ 跑輸 |
 
 ---
 ## 全股票快照
 
 | 個股 | 層 | 今日% | 相對強弱 | Rebound | Vol倍率 |
 | --- | --- | --- | --- | --- | --- |
-| 🟢 Viasat | 🛰️ Satellite / LEO | +18.23% | +7.09% | 0.980 | 1.20x |
-| 🟢 Intuitive Machines | 🛰️ Satellite / LEO | +15.47% | +4.33% | 0.938 | 1.92x |
-| 🟢 Lam Research | 💾 HBM / Memory | +12.65% | +4.15% | 0.906 | 1.21x |
-| 🟢 AST SpaceMobile | 🛰️ Satellite / LEO | +11.73% | +0.59% | 0.953 | 1.24x |
-| 🟢 MU | 💾 HBM / Memory | +11.66% | +3.16% | 0.990 | 0.93x |
-| 🟢 ARM | 🔲 CPU / SoC | +11.32% | +4.36% | 0.934 | 0.77x |
-| 🟢 MRVL | 🔌 Networking / CPO | +11.13% | +6.46% | 0.922 | 0.69x |
-| 🟢 Teradyne | 🤖 Humanoid / AI Robots | +9.73% | +5.92% | 0.983 | 1.22x |
-| 🟢 ASML | 🧠 GPU / ASIC | +9.53% | +4.21% | 0.967 | 1.15x |
-| 🟢 INTC | 🔲 CPU / SoC | +9.27% | +2.31% | 0.727 | 1.48x |
-| 🟢 Rocket Lab | 🛰️ Satellite / LEO | +9.26% | -1.88% | 0.972 | 1.33x |
-| 🟢 FSLR | ⚡ Energy / Power | +8.79% | +4.69% | 0.932 | 0.86x |
-| 🟢 Western Digital | 💾 HBM / Memory | +8.00% | -0.50% | 0.980 | 0.90x |
-| 🟢 AMD | 🧠 GPU / ASIC | +7.97% | +2.65% | 0.931 | 0.91x |
-| 🟢 Samsung | 💾 HBM / Memory | +7.86% | -0.64% | 0.132 | 1.27x |
-| 🟢 FANUC | 🦾 Industrial Robotics | +6.60% | +1.30% | 0.874 | 1.07x |
-| 🟢 Honeywell | 🤖 Humanoid / AI Robots | +6.43% | +2.62% | 0.968 | 1.35x |
-| 🟢 QCOM | 🔲 CPU / SoC | +6.15% | -0.81% | 0.928 | 0.91x |
-| 🟢 ABB | 🦾 Industrial Robotics | +6.04% | +0.74% | 0.879 | 2.27x |
-| 🟢 Microchip | 🔲 CPU / SoC | +5.72% | -1.24% | 0.921 | 1.12x |
-| 🟢 VST | ⚡ Energy / Power | +5.66% | +1.56% | 0.928 | 1.33x |
-| 🟢 TSLA | 🦾 Industrial Robotics | +4.60% | -0.70% | 0.971 | 0.87x |
-| 🟢 GE Vernova | ⚡ Energy / Power | +4.58% | +0.48% | 0.602 | 1.31x |
-| 🟢 LITE | 🔌 Networking / CPO | +4.26% | -0.41% | 0.977 | 0.71x |
-| 🟢 Rockwell | 🦾 Industrial Robotics | +3.98% | -1.32% | 0.881 | 0.96x |
-| 🟢 Emerson | 🤖 Humanoid / AI Robots | +3.63% | -0.18% | 0.927 | 0.89x |
-| 🟢 AVGO | 🧠 GPU / ASIC | +3.62% | -1.70% | 0.772 | 0.72x |
-| 🟢 TSM | 🧠 GPU / ASIC | +3.26% | -2.06% | 0.912 | 0.90x |
-| 🟢 ANET | 🔌 Networking / CPO | +3.06% | -1.61% | 0.891 | 0.67x |
-| 🟢 COHR | 🔌 Networking / CPO | +2.48% | -2.19% | 0.705 | 1.01x |
-| 🟢 Ciena | 🔌 Networking / CPO | +2.43% | -2.24% | 0.702 | 0.51x |
-| 🟢 MediaTek | 🔲 CPU / SoC | +2.33% | -4.63% | 0.060 | 0.60x |
-| 🟢 SKHynix | 💾 HBM / Memory | +2.33% | -6.17% | 0.000 | 1.19x |
-| 🟢 NVDA | 🧠 GPU / ASIC | +2.22% | -3.10% | 0.838 | 0.91x |
-| 🟢 Shopify | 📱 Consumer Electronics | +2.10% | +1.21% | 0.983 | 1.10x |
-| 🟢 CEG | ⚡ Energy / Power | +1.82% | -2.28% | 0.691 | 1.35x |
-| 🟢 AMZN | 📱 Consumer Electronics | +1.47% | +0.58% | 0.878 | 0.99x |
-| 🟢 AAPL | 📱 Consumer Electronics | +1.39% | +0.50% | 0.778 | 0.68x |
-| 🟢 Globalstar | 🛰️ Satellite / LEO | +1.00% | -10.14% | 0.713 | 1.12x |
-| 🟢 PLTR | 🤖 Model / Software | +0.67% | +2.01% | 0.885 | 0.78x |
-| 🟢 Alphabet | 📱 Consumer Electronics | +0.39% | -0.50% | 0.909 | 1.03x |
-| 🟢 Intuitive Surgical | 🤖 Humanoid / AI Robots | +0.21% | -3.60% | 0.645 | 0.86x |
-| 🔴 NEE | ⚡ Energy / Power | -0.33% | -4.43% | 0.050 | 0.83x |
-| 🔴 META | 🤖 Model / Software | -0.45% | +0.89% | 0.751 | 0.84x |
-| 🔴 Netflix | 📱 Consumer Electronics | -0.89% | -1.78% | 0.582 | 0.89x |
-| 🔴 UiPath | 🤖 Humanoid / AI Robots | -0.93% | -4.74% | 0.826 | 1.04x |
-| 🔴 MSFT | 🤖 Model / Software | -1.77% | -0.43% | 0.469 | 1.46x |
-| 🔴 CRM | 🤖 Model / Software | -2.36% | -1.02% | 0.557 | 1.28x |
-| 🔴 NOW | 🤖 Model / Software | -2.81% | -1.47% | 0.462 | 1.04x |
+| 🟢 ARM | 🔲 CPU / SoC | +11.27% | +5.89% | 0.853 | 1.52x |
+| 🟢 Samsung | 💾 HBM / Memory | +7.86% | +4.60% | 0.132 | 1.16x |
+| 🟢 INTC | 🔲 CPU / SoC | +6.51% | +1.13% | 0.751 | 1.02x |
+| 🟢 Western Digital | 💾 HBM / Memory | +6.36% | +3.10% | 0.765 | 0.90x |
+| 🟢 COHR | 🔌 Networking / CPO | +5.90% | +3.17% | 0.766 | 0.83x |
+| 🟢 Teradyne | 🤖 Humanoid / AI Robots | +5.72% | +4.61% | 0.831 | 0.77x |
+| 🟢 AMD | 🧠 GPU / ASIC | +4.73% | +4.18% | 0.618 | 0.94x |
+| 🟢 ANET | 🔌 Networking / CPO | +4.37% | +1.64% | 0.670 | 0.87x |
+| 🟢 QCOM | 🔲 CPU / SoC | +4.32% | -1.06% | 0.776 | 0.65x |
+| 🟢 GE Vernova | ⚡ Energy / Power | +3.74% | +2.21% | 0.897 | 0.76x |
+| 🟢 LITE | 🔌 Networking / CPO | +3.59% | +0.86% | 0.817 | 0.73x |
+| 🟢 Yaskawa | 🦾 Industrial Robotics | +3.42% | +2.80% | 0.120 | 0.72x |
+| 🟢 CEG | ⚡ Energy / Power | +2.86% | +1.33% | 0.813 | 0.83x |
+| 🟢 Microchip | 🔲 CPU / SoC | +2.47% | -2.91% | 0.874 | 0.56x |
+| 🟢 SKHynix | 💾 HBM / Memory | +2.33% | -0.93% | 0.000 | 1.06x |
+| 🟢 MediaTek | 🔲 CPU / SoC | +2.33% | -3.05% | 0.060 | 0.57x |
+| 🟢 TSLA | 🦾 Industrial Robotics | +1.82% | +1.20% | 0.988 | 1.18x |
+| 🟢 NEE | ⚡ Energy / Power | +1.36% | -0.17% | 0.934 | 0.97x |
+| 🟢 Lam Research | 💾 HBM / Memory | +1.18% | -2.08% | 0.623 | 0.68x |
+| 🟢 VST | ⚡ Energy / Power | +1.12% | -0.41% | 0.297 | 1.07x |
+| 🟢 Emerson | 🤖 Humanoid / AI Robots | +0.69% | -0.42% | 0.512 | 0.94x |
+| 🟢 TSM | 🧠 GPU / ASIC | +0.68% | +0.13% | 0.675 | 0.65x |
+| 🟢 Honeywell | 🤖 Humanoid / AI Robots | +0.54% | -0.57% | 0.175 | 0.95x |
+| 🟢 Alphabet | 📱 Consumer Electronics | +0.53% | +1.61% | 0.407 | 0.76x |
+| 🟢 Rockwell | 🦾 Industrial Robotics | +0.38% | -0.24% | 0.440 | 0.82x |
+| 🟢 Ciena | 🔌 Networking / CPO | +0.17% | -2.56% | 0.285 | 0.54x |
+| 🟢 NVDA | 🧠 GPU / ASIC | +0.16% | -0.39% | 0.466 | 0.65x |
+| 🟢 MSFT | 🤖 Model / Software | +0.10% | +0.85% | 0.898 | 0.96x |
+| 🟢 Globalstar | 🛰️ Satellite / LEO | +0.06% | +8.63% | 0.539 | 0.79x |
+| 🔴 META | 🤖 Model / Software | -0.26% | +0.49% | 0.382 | 0.71x |
+| 🔴 FANUC | 🦾 Industrial Robotics | -0.32% | -0.94% | 0.356 | 0.32x |
+| 🔴 CRM | 🤖 Model / Software | -0.34% | +0.41% | 0.901 | 1.01x |
+| 🔴 MRVL | 🔌 Networking / CPO | -0.36% | -3.09% | 0.595 | 0.55x |
+| 🔴 Intuitive Surgical | 🤖 Humanoid / AI Robots | -0.45% | -1.56% | 0.633 | 0.79x |
+| 🔴 NOW | 🤖 Model / Software | -0.90% | -0.15% | 0.748 | 0.96x |
+| 🔴 AVGO | 🧠 GPU / ASIC | -0.91% | -1.46% | 0.609 | 0.69x |
+| 🔴 UiPath | 🤖 Humanoid / AI Robots | -0.94% | -2.05% | 0.754 | 0.93x |
+| 🔴 Netflix | 📱 Consumer Electronics | -1.14% | -0.06% | 0.388 | 0.98x |
+| 🔴 AMZN | 📱 Consumer Electronics | -1.23% | -0.15% | 0.507 | 1.20x |
+| 🔴 FSLR | ⚡ Energy / Power | -1.42% | -2.95% | 0.078 | 0.64x |
+| 🔴 MU | 💾 HBM / Memory | -1.43% | -4.69% | 0.391 | 0.64x |
+| 🔴 AAPL | 📱 Consumer Electronics | -1.52% | -0.44% | 0.194 | 0.63x |
+| 🔴 ASML | 🧠 GPU / ASIC | -1.89% | -2.44% | 0.438 | 0.94x |
+| 🔴 Shopify | 📱 Consumer Electronics | -2.02% | -0.94% | 0.319 | 1.14x |
+| 🔴 ABB | 🦾 Industrial Robotics | -2.18% | -2.80% | 0.302 | 1.18x |
+| 🔴 PLTR | 🤖 Model / Software | -2.36% | -1.61% | 0.300 | 1.09x |
+| 🔴 Viasat | 🛰️ Satellite / LEO | -3.49% | +5.08% | 0.192 | 1.11x |
+| 🔴 Rocket Lab | 🛰️ Satellite / LEO | -10.79% | -2.22% | 0.153 | 3.22x |
+| 🔴 Intuitive Machines | 🛰️ Satellite / LEO | -13.12% | -4.55% | 0.257 | 1.66x |
+| 🔴 AST SpaceMobile | 🛰️ Satellite / LEO | -15.53% | -6.96% | 0.062 | 2.60x |
 
 ---
-_監控個股數: **49** | 本報告純屬量化監控輸出，不構成投資建議_
+_監控個股數: **50** | 本報告純屬量化監控輸出，不構成投資建議_
