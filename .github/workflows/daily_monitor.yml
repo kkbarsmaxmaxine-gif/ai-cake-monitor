@@ -84,5 +84,6 @@ jobs:
             echo "Nothing to commit (report unchanged)."
           else
             git commit -m "chore: daily AI cake monitor report ${DATE}"
+            git pull --rebase origin main
             git push
           fi
