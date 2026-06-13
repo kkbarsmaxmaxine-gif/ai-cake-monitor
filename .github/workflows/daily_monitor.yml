@@ -81,7 +81,9 @@ jobs:
           # Sync with remote before staging so push never gets rejected
           git pull origin main
 
-          git add "$REPORT" docs/data.json
+          # Use glob: Python may write the report under the real market date,
+          # which differs from $DATE when the auto-correction kicks in.
+          git add output/*.md docs/data.json
 
           if git diff --cached --quiet; then
             echo "Nothing to commit (report unchanged)."
