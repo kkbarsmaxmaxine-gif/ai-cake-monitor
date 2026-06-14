@@ -105,7 +105,12 @@ jobs:
 
       # ── 6. Trigger Netlify redeploy ──────────────────────────────────────────
       - name: Trigger Netlify deploy
-        if: ${{ secrets.NETLIFY_BUILD_HOOK != '' }}
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
-          curl -s -X POST "${{ secrets.NETLIFY_BUILD_HOOK }}"
-          echo "Netlify deploy triggered."
+          if [ -n "$NETLIFY_BUILD_HOOK" ]; then
+            curl -s -X POST "$NETLIFY_BUILD_HOOK"
+            echo "Netlify deploy triggered."
+          else
+            echo "NETLIFY_BUILD_HOOK not set — skipping."
+          fi
