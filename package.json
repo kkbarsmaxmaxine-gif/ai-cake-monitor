@@ -1,0 +1,7 @@
+{
+  "name": "ai-cake-monitor-web",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx serve docs -l 8080"
+  }
+}
