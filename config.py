@@ -1,8 +1,9 @@
 """
 ai_cake_monitor/config.py – Jensen Huang's AI 5-layer cake monitor config.
 
-Layer mapping (10 sub-layers):
-  1   Energy / Power
+Layer mapping (11 sub-layers):
+  1a  Energy / Power Generation
+  1b  Power Grid / Infrastructure
   2a  GPU / ASIC
   2b  HBM / Memory
   2c  CPU / SoC
@@ -23,11 +24,24 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 LAYERS: dict[str, dict] = {
     # ── Layer 1: Energy ───────────────────────────────────────────────────────
     "energy": {
-        "label": "⚡ Energy / Power",
+        "label": "⚡ Energy / Power Generation",
         "cake_layer": 1,
-        "tickers": ["CEG", "VST", "GEV", "FSLR", "NEE"],
+        "tickers": ["CEG", "VST", "GEV", "NEE", "NRG"],
         "ticker_labels": {
             "GEV": "GE Vernova",
+            "NRG": "NRG Energy",
+        },
+    },
+    "power_grid": {
+        "label": "🔌 Power Grid / Infra",
+        "cake_layer": 1,
+        "tickers": ["ETN", "HUBB", "VRT", "PWR", "EME"],
+        "ticker_labels": {
+            "ETN":  "Eaton",
+            "HUBB": "Hubbell",
+            "VRT":  "Vertiv",
+            "PWR":  "Quanta Services",
+            "EME":  "EMCOR",
         },
     },
 
