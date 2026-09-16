@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T17:32:46.795609Z",
+  "updated_at": "2026-09-16T17:32:56.911429Z",
   "sources": [
     "youtube",
     "news"
@@ -8,82 +8,82 @@
     "CEG": {
       "display_name": "CEG",
       "reddit": 0,
-      "youtube": 11,
+      "youtube": 15,
       "news": 0,
-      "total": 11,
-      "score": 33
+      "total": 15,
+      "score": 45
     },
     "VST": {
       "display_name": "VST",
       "reddit": 0,
-      "youtube": 16,
+      "youtube": 8,
       "news": 0,
-      "total": 16,
-      "score": 48
+      "total": 8,
+      "score": 24
     },
     "GEV": {
       "display_name": "GE Vernova",
       "reddit": 0,
-      "youtube": 28,
-      "news": 30,
-      "total": 58,
-      "score": 144
+      "youtube": 27,
+      "news": 25,
+      "total": 52,
+      "score": 131
     },
     "NEE": {
       "display_name": "NEE",
       "reddit": 0,
       "youtube": 50,
-      "news": 79,
-      "total": 129,
-      "score": 308
+      "news": 102,
+      "total": 152,
+      "score": 354
     },
     "NRG": {
       "display_name": "NRG Energy",
       "reddit": 0,
-      "youtube": 2,
+      "youtube": 1,
       "news": 0,
-      "total": 2,
-      "score": 6
+      "total": 1,
+      "score": 3
     },
     "ETN": {
       "display_name": "Eaton",
       "reddit": 0,
-      "youtube": 46,
-      "news": 70,
-      "total": 116,
-      "score": 278
+      "youtube": 30,
+      "news": 62,
+      "total": 92,
+      "score": 214
     },
     "HUBB": {
       "display_name": "Hubbell",
       "reddit": 0,
-      "youtube": 20,
+      "youtube": 33,
       "news": 2,
-      "total": 22,
-      "score": 64
+      "total": 35,
+      "score": 103
     },
     "VRT": {
       "display_name": "Vertiv",
       "reddit": 0,
-      "youtube": 26,
+      "youtube": 31,
       "news": 1,
-      "total": 27,
-      "score": 80
+      "total": 32,
+      "score": 95
     },
     "PWR": {
       "display_name": "Quanta Services",
       "reddit": 0,
-      "youtube": 5,
+      "youtube": 8,
       "news": 0,
-      "total": 5,
-      "score": 15
+      "total": 8,
+      "score": 24
     },
     "EME": {
       "display_name": "EMCOR",
       "reddit": 0,
       "youtube": 50,
-      "news": 1736,
-      "total": 1786,
-      "score": 3622
+      "news": 1729,
+      "total": 1779,
+      "score": 3608
     },
     "NVDA": {
       "display_name": "NVDA",
@@ -97,9 +97,9 @@
       "display_name": "TSM",
       "reddit": 0,
       "youtube": 50,
-      "news": 47,
-      "total": 97,
-      "score": 244
+      "news": 38,
+      "total": 88,
+      "score": 226
     },
     "AVGO": {
       "display_name": "AVGO",
@@ -112,26 +112,26 @@
     "ASML": {
       "display_name": "ASML",
       "reddit": 0,
-      "youtube": 50,
-      "news": 11,
-      "total": 61,
-      "score": 172
+      "youtube": 37,
+      "news": 13,
+      "total": 50,
+      "score": 137
     },
     "AMD": {
       "display_name": "AMD",
       "reddit": 0,
       "youtube": 50,
-      "news": 47,
-      "total": 97,
-      "score": 244
+      "news": 46,
+      "total": 96,
+      "score": 242
     },
     "MU": {
       "display_name": "MU",
       "reddit": 0,
       "youtube": 50,
-      "news": 599,
-      "total": 649,
-      "score": 1348
+      "news": 600,
+      "total": 650,
+      "score": 1350
     },
     "000660.KS": {
       "display_name": "SKHynix",
@@ -145,81 +145,81 @@
       "display_name": "Samsung",
       "reddit": 0,
       "youtube": 50,
-      "news": 25,
-      "total": 75,
-      "score": 200
+      "news": 32,
+      "total": 82,
+      "score": 214
     },
     "WDC": {
       "display_name": "Western Digital",
       "reddit": 0,
-      "youtube": 14,
+      "youtube": 24,
       "news": 17,
-      "total": 31,
-      "score": 76
+      "total": 41,
+      "score": 106
     },
     "LRCX": {
       "display_name": "Lam Research",
       "reddit": 0,
-      "youtube": 7,
+      "youtube": 4,
       "news": 0,
-      "total": 7,
-      "score": 21
+      "total": 4,
+      "score": 12
     },
     "ARM": {
       "display_name": "ARM",
       "reddit": 0,
       "youtube": 50,
-      "news": 93,
-      "total": 143,
-      "score": 336
+      "news": 102,
+      "total": 152,
+      "score": 354
     },
     "INTC": {
       "display_name": "INTC",
       "reddit": 0,
-      "youtube": 47,
+      "youtube": 50,
       "news": 5,
-      "total": 52,
-      "score": 151
+      "total": 55,
+      "score": 160
     },
     "QCOM": {
       "display_name": "QCOM",
       "reddit": 0,
-      "youtube": 13,
+      "youtube": 33,
       "news": 0,
-      "total": 13,
-      "score": 39
+      "total": 33,
+      "score": 99
     },
     "2454.TW": {
       "display_name": "MediaTek",
       "reddit": 0,
       "youtube": 50,
-      "news": 44,
-      "total": 94,
-      "score": 238
+      "news": 24,
+      "total": 74,
+      "score": 198
     },
     "MCHP": {
       "display_name": "Microchip",
       "reddit": 0,
-      "youtube": 7,
+      "youtube": 6,
       "news": 2,
-      "total": 9,
-      "score": 25
+      "total": 8,
+      "score": 22
     },
     "MRVL": {
       "display_name": "MRVL",
       "reddit": 0,
-      "youtube": 50,
+      "youtube": 28,
       "news": 0,
-      "total": 50,
-      "score": 150
+      "total": 28,
+      "score": 84
     },
     "ANET": {
       "display_name": "ANET",
       "reddit": 0,
-      "youtube": 6,
-      "news": 6,
-      "total": 12,
-      "score": 30
+      "youtube": 8,
+      "news": 0,
+      "total": 8,
+      "score": 24
     },
     "LITE": {
       "display_name": "LITE",
@@ -232,34 +232,34 @@
     "COHR": {
       "display_name": "COHR",
       "reddit": 0,
-      "youtube": 13,
+      "youtube": 11,
       "news": 0,
-      "total": 13,
-      "score": 39
+      "total": 11,
+      "score": 33
     },
     "CIEN": {
       "display_name": "Ciena",
       "reddit": 0,
-      "youtube": 50,
-      "news": 121,
-      "total": 171,
-      "score": 392
+      "youtube": 48,
+      "news": 127,
+      "total": 175,
+      "score": 398
     },
     "NOW": {
       "display_name": "NOW",
       "reddit": 0,
       "youtube": 50,
-      "news": 693,
-      "total": 743,
-      "score": 1536
+      "news": 687,
+      "total": 737,
+      "score": 1524
     },
     "PLTR": {
       "display_name": "PLTR",
       "reddit": 0,
-      "youtube": 43,
+      "youtube": 50,
       "news": 0,
-      "total": 43,
-      "score": 129
+      "total": 50,
+      "score": 150
     },
     "CRM": {
       "display_name": "CRM",
@@ -281,41 +281,41 @@
       "display_name": "META",
       "reddit": 0,
       "youtube": 50,
-      "news": 188,
-      "total": 238,
-      "score": 526
+      "news": 199,
+      "total": 249,
+      "score": 548
     },
     "FANUY": {
       "display_name": "FANUC",
       "reddit": 0,
-      "youtube": 7,
+      "youtube": 2,
       "news": 0,
-      "total": 7,
-      "score": 21
+      "total": 2,
+      "score": 6
     },
     "YASKY": {
       "display_name": "Yaskawa",
       "reddit": 0,
-      "youtube": 3,
-      "news": 0,
-      "total": 3,
-      "score": 9
+      "youtube": 7,
+      "news": 4,
+      "total": 11,
+      "score": 29
     },
     "ABBNY": {
       "display_name": "ABB",
       "reddit": 0,
-      "youtube": 43,
-      "news": 25,
-      "total": 68,
-      "score": 179
+      "youtube": 49,
+      "news": 23,
+      "total": 72,
+      "score": 193
     },
     "ROK": {
       "display_name": "Rockwell",
       "reddit": 0,
       "youtube": 50,
-      "news": 318,
-      "total": 368,
-      "score": 786
+      "news": 263,
+      "total": 313,
+      "score": 676
     },
     "TSLA": {
       "display_name": "TSLA",
@@ -328,82 +328,82 @@
     "ISRG": {
       "display_name": "Intuitive Surgical",
       "reddit": 0,
-      "youtube": 4,
+      "youtube": 5,
       "news": 0,
-      "total": 4,
-      "score": 12
+      "total": 5,
+      "score": 15
     },
     "PATH": {
       "display_name": "UiPath",
       "reddit": 0,
       "youtube": 50,
-      "news": 995,
-      "total": 1045,
-      "score": 2140
+      "news": 996,
+      "total": 1046,
+      "score": 2142
     },
     "HON": {
       "display_name": "Honeywell",
       "reddit": 0,
       "youtube": 50,
-      "news": 310,
-      "total": 360,
-      "score": 770
+      "news": 299,
+      "total": 349,
+      "score": 748
     },
     "EMR": {
       "display_name": "Emerson",
+      "reddit": 0,
+      "youtube": 3,
+      "news": 0,
+      "total": 3,
+      "score": 9
+    },
+    "TER": {
+      "display_name": "Teradyne",
+      "reddit": 0,
+      "youtube": 50,
+      "news": 6830,
+      "total": 6880,
+      "score": 13810
+    },
+    "ASTS": {
+      "display_name": "AST SpaceMobile",
+      "reddit": 0,
+      "youtube": 15,
+      "news": 14,
+      "total": 29,
+      "score": 73
+    },
+    "RKLB": {
+      "display_name": "Rocket Lab",
+      "reddit": 0,
+      "youtube": 28,
+      "news": 5,
+      "total": 33,
+      "score": 94
+    },
+    "LUNR": {
+      "display_name": "Intuitive Machines",
       "reddit": 0,
       "youtube": 6,
       "news": 0,
       "total": 6,
       "score": 18
     },
-    "TER": {
-      "display_name": "Teradyne",
-      "reddit": 0,
-      "youtube": 50,
-      "news": 6947,
-      "total": 6997,
-      "score": 14044
-    },
-    "ASTS": {
-      "display_name": "AST SpaceMobile",
-      "reddit": 0,
-      "youtube": 10,
-      "news": 15,
-      "total": 25,
-      "score": 60
-    },
-    "RKLB": {
-      "display_name": "Rocket Lab",
-      "reddit": 0,
-      "youtube": 14,
-      "news": 5,
-      "total": 19,
-      "score": 52
-    },
-    "LUNR": {
-      "display_name": "Intuitive Machines",
-      "reddit": 0,
-      "youtube": 4,
-      "news": 0,
-      "total": 4,
-      "score": 12
-    },
     "VSAT": {
       "display_name": "Viasat",
       "reddit": 0,
-      "youtube": 4,
+      "youtube": 3,
       "news": 0,
-      "total": 4,
-      "score": 12
+      "total": 3,
+      "score": 9
     },
     "GSAT": {
       "display_name": "Globalstar",
       "reddit": 0,
-      "youtube": 13,
+      "youtube": 14,
       "news": 0,
-      "total": 13,
-      "score": 39
+      "total": 14,
+      "score": 42
     },
     "AAPL": {
       "display_name": "AAPL",
@@ -425,9 +425,9 @@
       "display_name": "Alphabet",
       "reddit": 0,
       "youtube": 50,
-      "news": 256,
-      "total": 306,
-      "score": 662
+      "news": 258,
+      "total": 308,
+      "score": 666
     },
     "NFLX": {
       "display_name": "Netflix",
@@ -441,77 +441,77 @@
       "display_name": "Shopify",
       "reddit": 0,
       "youtube": 50,
-      "news": 33,
-      "total": 83,
-      "score": 216
+      "news": 29,
+      "total": 79,
+      "score": 208
     }
   },
   "by_layer": {
     "energy": {
-      "total": 216,
-      "score": 539,
+      "total": 228,
+      "score": 557,
       "top_ticker": "NEE",
-      "top_score": 308
+      "top_score": 354
     },
     "power_grid": {
-      "total": 1956,
-      "score": 4059,
+      "total": 1946,
+      "score": 4044,
       "top_ticker": "EMCOR",
-      "top_score": 3622
+      "top_score": 3608
     },
     "chip_core": {
-      "total": 355,
-      "score": 960,
-      "top_ticker": "TSM",
-      "top_score": 244
+      "total": 334,
+      "score": 905,
+      "top_ticker": "AMD",
+      "top_score": 242
     },
     "chip_memory": {
-      "total": 812,
-      "score": 1795,
+      "total": 827,
+      "score": 1832,
       "top_ticker": "MU",
-      "top_score": 1348
+      "top_score": 1350
     },
     "chip_cpu": {
-      "total": 311,
-      "score": 789,
+      "total": 322,
+      "score": 833,
       "top_ticker": "ARM",
-      "top_score": 336
+      "top_score": 354
     },
     "infra_cpo": {
-      "total": 328,
-      "score": 825,
+      "total": 304,
+      "score": 753,
       "top_ticker": "Ciena",
-      "top_score": 392
+      "top_score": 398
     },
     "model_software": {
-      "total": 1126,
-      "score": 2495,
+      "total": 1138,
+      "score": 2526,
       "top_ticker": "NOW",
-      "top_score": 1536
+      "top_score": 1524
     },
     "application_robotics": {
-      "total": 496,
-      "score": 1145,
+      "total": 448,
+      "score": 1054,
       "top_ticker": "Rockwell",
-      "top_score": 786
+      "top_score": 676
     },
     "humanoid_robotics": {
-      "total": 8412,
-      "score": 16984,
+      "total": 8283,
+      "score": 16724,
       "top_ticker": "Teradyne",
-      "top_score": 14044
+      "top_score": 13810
     },
     "satellite": {
-      "total": 65,
-      "score": 175,
-      "top_ticker": "AST SpaceMobile",
-      "top_score": 60
+      "total": 85,
+      "score": 236,
+      "top_ticker": "Rocket Lab",
+      "top_score": 94
     },
     "consumer": {
-      "total": 539,
-      "score": 1328,
+      "total": 537,
+      "score": 1324,
       "top_ticker": "Alphabet",
-      "top_score": 662
+      "top_score": 666
     }
   },
   "top5": [
@@ -520,45 +520,45 @@
       "display_name": "Teradyne",
       "reddit": 0,
       "youtube": 50,
-      "news": 6947,
-      "total": 6997,
-      "score": 14044
+      "news": 6830,
+      "total": 6880,
+      "score": 13810
     },
     {
       "ticker": "EME",
       "display_name": "EMCOR",
       "reddit": 0,
       "youtube": 50,
-      "news": 1736,
-      "total": 1786,
-      "score": 3622
+      "news": 1729,
+      "total": 1779,
+      "score": 3608
     },
     {
       "ticker": "PATH",
       "display_name": "UiPath",
       "reddit": 0,
       "youtube": 50,
-      "news": 995,
-      "total": 1045,
-      "score": 2140
+      "news": 996,
+      "total": 1046,
+      "score": 2142
     },
     {
       "ticker": "NOW",
       "display_name": "NOW",
       "reddit": 0,
       "youtube": 50,
-      "news": 693,
-      "total": 743,
-      "score": 1536
+      "news": 687,
+      "total": 737,
+      "score": 1524
     },
     {
       "ticker": "MU",
       "display_name": "MU",
       "reddit": 0,
       "youtube": 50,
-      "news": 599,
-      "total": 649,
-      "score": 1348
+      "news": 600,
+      "total": 650,
+      "score": 1350
     }
   ]
 }
