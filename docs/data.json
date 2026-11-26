@@ -1,343 +1,343 @@
 {
-  "date": "20261124",
-  "benchmark_chg": -0.5,
-  "nasdaq_chg": -1.48,
-  "vix_level": 26.36,
-  "vix_chg": -0.98,
+  "date": "20261125",
+  "benchmark_chg": -0.25,
+  "nasdaq_chg": -0.62,
+  "vix_level": 28.29,
+  "vix_chg": 7.32,
   "layers": [
-    {
-      "layer_id": "model_software",
-      "label": "🤖 Model / Software",
-      "cake_layer": 4,
-      "avg_change": 0.96,
-      "avg_vol_ratio": 0.77,
-      "best_ticker": "CRM",
-      "best_pct": 4.21,
-      "worst_ticker": "META",
-      "worst_pct": -1.3,
-      "top_stocks": [
-        {
-          "ticker": "CRM",
-          "display_name": "CRM",
-          "change_pct": 4.21
-        },
-        {
-          "ticker": "PLTR",
-          "display_name": "PLTR",
-          "change_pct": 1.14
-        },
-        {
-          "ticker": "MSFT",
-          "display_name": "MSFT",
-          "change_pct": 0.74
-        }
-      ],
-      "buzz_total": 920,
-      "buzz_top": "NOW"
-    },
-    {
-      "layer_id": "consumer",
-      "label": "📱 Consumer Electronics",
-      "cake_layer": 5,
-      "avg_change": -0.2,
-      "avg_vol_ratio": 0.76,
-      "best_ticker": "AAPL",
-      "best_pct": 1.43,
-      "worst_ticker": "Shopify",
-      "worst_pct": -1.48,
-      "top_stocks": [
-        {
-          "ticker": "AAPL",
-          "display_name": "AAPL",
-          "change_pct": 1.43
-        },
-        {
-          "ticker": "NFLX",
-          "display_name": "Netflix",
-          "change_pct": 1.33
-        },
-        {
-          "ticker": "GOOGL",
-          "display_name": "Alphabet",
-          "change_pct": -1.08
-        }
-      ],
-      "buzz_total": 271,
-      "buzz_top": "Alphabet"
-    },
-    {
-      "layer_id": "application_robotics",
-      "label": "🦾 Industrial Robotics",
-      "cake_layer": 5,
-      "avg_change": -0.47,
-      "avg_vol_ratio": 0.87,
-      "best_ticker": "Yaskawa",
-      "best_pct": 1.27,
-      "worst_ticker": "ABB",
-      "worst_pct": -2.72,
-      "top_stocks": [
-        {
-          "ticker": "YASKY",
-          "display_name": "Yaskawa",
-          "change_pct": 1.27
-        },
-        {
-          "ticker": "TSLA",
-          "display_name": "TSLA",
-          "change_pct": -0.2
-        },
-        {
-          "ticker": "FANUY",
-          "display_name": "FANUC",
-          "change_pct": -0.24
-        }
-      ],
-      "buzz_total": 385,
-      "buzz_top": "Rockwell"
-    },
-    {
-      "layer_id": "humanoid_robotics",
-      "label": "🤖 Humanoid / AI Robots",
-      "cake_layer": 5,
-      "avg_change": -0.54,
-      "avg_vol_ratio": 1.06,
-      "best_ticker": "Intuitive Surgical",
-      "best_pct": 4.38,
-      "worst_ticker": "Teradyne",
-      "worst_pct": -8.69,
-      "top_stocks": [
-        {
-          "ticker": "ISRG",
-          "display_name": "Intuitive Surgical",
-          "change_pct": 4.38
-        },
-        {
-          "ticker": "HON",
-          "display_name": "Honeywell",
-          "change_pct": 1.28
-        },
-        {
-          "ticker": "PATH",
-          "display_name": "UiPath",
-          "change_pct": 1.18
-        }
-      ],
-      "buzz_total": 7978,
-      "buzz_top": "Teradyne"
-    },
-    {
-      "layer_id": "energy",
-      "label": "⚡ Energy / Power Generation",
-      "cake_layer": 1,
-      "avg_change": -3.26,
-      "avg_vol_ratio": 0.9,
-      "best_ticker": "NEE",
-      "best_pct": 0.73,
-      "worst_ticker": "NRG Energy",
-      "worst_pct": -6.98,
-      "top_stocks": [
-        {
-          "ticker": "NEE",
-          "display_name": "NEE",
-          "change_pct": 0.73
-        },
-        {
-          "ticker": "VST",
-          "display_name": "VST",
-          "change_pct": -2.54
-        },
-        {
-          "ticker": "CEG",
-          "display_name": "CEG",
-          "change_pct": -2.73
-        }
-      ],
-      "buzz_total": 115,
-      "buzz_top": "NEE"
-    },
-    {
-      "layer_id": "power_grid",
-      "label": "🔌 Power Grid / Infra",
-      "cake_layer": 1,
-      "avg_change": -4.11,
-      "avg_vol_ratio": 0.84,
-      "best_ticker": "EMCOR",
-      "best_pct": -2.7,
-      "worst_ticker": "Vertiv",
-      "worst_pct": -6.67,
-      "top_stocks": [
-        {
-          "ticker": "EME",
-          "display_name": "EMCOR",
-          "change_pct": -2.7
-        },
-        {
-          "ticker": "HUBB",
-          "display_name": "Hubbell",
-          "change_pct": -2.9
-        },
-        {
-          "ticker": "PWR",
-          "display_name": "Quanta Services",
-          "change_pct": -3.18
-        }
-      ],
-      "buzz_total": 1764,
-      "buzz_top": "EMCOR"
-    },
     {
       "layer_id": "satellite",
       "label": "🛰️ Satellite / LEO",
       "cake_layer": 5,
-      "avg_change": -4.86,
-      "avg_vol_ratio": 0.81,
-      "best_ticker": "Globalstar",
-      "best_pct": 0.42,
-      "worst_ticker": "Intuitive Machines",
-      "worst_pct": -8.41,
+      "avg_change": 3.05,
+      "avg_vol_ratio": 1.17,
+      "best_ticker": "AST SpaceMobile",
+      "best_pct": 10.25,
+      "worst_ticker": "Globalstar",
+      "worst_pct": -0.52,
       "top_stocks": [
         {
-          "ticker": "GSAT",
-          "display_name": "Globalstar",
-          "change_pct": 0.42
+          "ticker": "ASTS",
+          "display_name": "AST SpaceMobile",
+          "change_pct": 10.25
         },
         {
-          "ticker": "VSAT",
-          "display_name": "Viasat",
-          "change_pct": -0.92
+          "ticker": "LUNR",
+          "display_name": "Intuitive Machines",
+          "change_pct": 2.35
         },
         {
           "ticker": "RKLB",
           "display_name": "Rocket Lab",
-          "change_pct": -7.35
+          "change_pct": 2.26
         }
       ],
-      "buzz_total": 46,
+      "buzz_total": 56,
       "buzz_top": "AST SpaceMobile"
-    },
-    {
-      "layer_id": "chip_core",
-      "label": "🧠 GPU / ASIC",
-      "cake_layer": 2,
-      "avg_change": -5.22,
-      "avg_vol_ratio": 0.79,
-      "best_ticker": "ASML",
-      "best_pct": -3.45,
-      "worst_ticker": "AMD",
-      "worst_pct": -8.86,
-      "top_stocks": [
-        {
-          "ticker": "ASML",
-          "display_name": "ASML",
-          "change_pct": -3.45
-        },
-        {
-          "ticker": "TSM",
-          "display_name": "TSM",
-          "change_pct": -3.96
-        },
-        {
-          "ticker": "AVGO",
-          "display_name": "AVGO",
-          "change_pct": -3.98
-        }
-      ],
-      "buzz_total": 98,
-      "buzz_top": "AMD"
     },
     {
       "layer_id": "chip_cpu",
       "label": "🔲 CPU / SoC",
       "cake_layer": 2,
-      "avg_change": -6.98,
-      "avg_vol_ratio": 1.07,
-      "best_ticker": "QCOM",
-      "best_pct": -0.25,
-      "worst_ticker": "MediaTek",
-      "worst_pct": -10.0,
+      "avg_change": 1.44,
+      "avg_vol_ratio": 0.93,
+      "best_ticker": "MediaTek",
+      "best_pct": 3.29,
+      "worst_ticker": "INTC",
+      "worst_pct": -0.6,
       "top_stocks": [
         {
-          "ticker": "QCOM",
-          "display_name": "QCOM",
-          "change_pct": -0.25
+          "ticker": "2454.TW",
+          "display_name": "MediaTek",
+          "change_pct": 3.29
         },
         {
           "ticker": "MCHP",
           "display_name": "Microchip",
-          "change_pct": -7.94
+          "change_pct": 2.31
         },
         {
-          "ticker": "INTC",
-          "display_name": "INTC",
-          "change_pct": -8.15
+          "ticker": "QCOM",
+          "display_name": "QCOM",
+          "change_pct": 2.24
         }
       ],
       "buzz_total": 104,
       "buzz_top": "ARM"
     },
     {
+      "layer_id": "model_software",
+      "label": "🤖 Model / Software",
+      "cake_layer": 4,
+      "avg_change": 1.23,
+      "avg_vol_ratio": 0.91,
+      "best_ticker": "META",
+      "best_pct": 3.4,
+      "worst_ticker": "MSFT",
+      "worst_pct": -1.25,
+      "top_stocks": [
+        {
+          "ticker": "META",
+          "display_name": "META",
+          "change_pct": 3.4
+        },
+        {
+          "ticker": "CRM",
+          "display_name": "CRM",
+          "change_pct": 2.04
+        },
+        {
+          "ticker": "PLTR",
+          "display_name": "PLTR",
+          "change_pct": 1.5
+        }
+      ],
+      "buzz_total": 918,
+      "buzz_top": "NOW"
+    },
+    {
+      "layer_id": "humanoid_robotics",
+      "label": "🤖 Humanoid / AI Robots",
+      "cake_layer": 5,
+      "avg_change": 0.35,
+      "avg_vol_ratio": 0.99,
+      "best_ticker": "UiPath",
+      "best_pct": 3.67,
+      "worst_ticker": "Intuitive Surgical",
+      "worst_pct": -1.68,
+      "top_stocks": [
+        {
+          "ticker": "PATH",
+          "display_name": "UiPath",
+          "change_pct": 3.67
+        },
+        {
+          "ticker": "EMR",
+          "display_name": "Emerson",
+          "change_pct": 0.16
+        },
+        {
+          "ticker": "HON",
+          "display_name": "Honeywell",
+          "change_pct": 0.12
+        }
+      ],
+      "buzz_total": 7977,
+      "buzz_top": "Teradyne"
+    },
+    {
+      "layer_id": "energy",
+      "label": "⚡ Energy / Power Generation",
+      "cake_layer": 1,
+      "avg_change": -0.41,
+      "avg_vol_ratio": 1.01,
+      "best_ticker": "NRG Energy",
+      "best_pct": 1.14,
+      "worst_ticker": "CEG",
+      "worst_pct": -3.9,
+      "top_stocks": [
+        {
+          "ticker": "NRG",
+          "display_name": "NRG Energy",
+          "change_pct": 1.14
+        },
+        {
+          "ticker": "NEE",
+          "display_name": "NEE",
+          "change_pct": 0.98
+        },
+        {
+          "ticker": "VST",
+          "display_name": "VST",
+          "change_pct": 0.5
+        }
+      ],
+      "buzz_total": 108,
+      "buzz_top": "NEE"
+    },
+    {
+      "layer_id": "consumer",
+      "label": "📱 Consumer Electronics",
+      "cake_layer": 5,
+      "avg_change": -0.62,
+      "avg_vol_ratio": 1.04,
+      "best_ticker": "Netflix",
+      "best_pct": 0.92,
+      "worst_ticker": "AMZN",
+      "worst_pct": -3.12,
+      "top_stocks": [
+        {
+          "ticker": "NFLX",
+          "display_name": "Netflix",
+          "change_pct": 0.92
+        },
+        {
+          "ticker": "SHOP",
+          "display_name": "Shopify",
+          "change_pct": 0.82
+        },
+        {
+          "ticker": "AAPL",
+          "display_name": "AAPL",
+          "change_pct": 0.43
+        }
+      ],
+      "buzz_total": 271,
+      "buzz_top": "Alphabet"
+    },
+    {
+      "layer_id": "power_grid",
+      "label": "🔌 Power Grid / Infra",
+      "cake_layer": 1,
+      "avg_change": -0.75,
+      "avg_vol_ratio": 1.07,
+      "best_ticker": "Hubbell",
+      "best_pct": 1.57,
+      "worst_ticker": "Quanta Services",
+      "worst_pct": -4.1,
+      "top_stocks": [
+        {
+          "ticker": "HUBB",
+          "display_name": "Hubbell",
+          "change_pct": 1.57
+        },
+        {
+          "ticker": "VRT",
+          "display_name": "Vertiv",
+          "change_pct": -0.26
+        },
+        {
+          "ticker": "ETN",
+          "display_name": "Eaton",
+          "change_pct": -0.46
+        }
+      ],
+      "buzz_total": 1755,
+      "buzz_top": "EMCOR"
+    },
+    {
       "layer_id": "infra_cpo",
       "label": "🔌 Networking / CPO",
       "cake_layer": 3,
-      "avg_change": -8.76,
-      "avg_vol_ratio": 0.91,
-      "best_ticker": "ANET",
-      "best_pct": -5.47,
-      "worst_ticker": "LITE",
-      "worst_pct": -10.52,
+      "avg_change": -0.78,
+      "avg_vol_ratio": 0.97,
+      "best_ticker": "Ciena",
+      "best_pct": 1.47,
+      "worst_ticker": "ANET",
+      "worst_pct": -2.71,
       "top_stocks": [
         {
-          "ticker": "ANET",
-          "display_name": "ANET",
-          "change_pct": -5.47
+          "ticker": "CIEN",
+          "display_name": "Ciena",
+          "change_pct": 1.47
         },
         {
           "ticker": "COHR",
           "display_name": "COHR",
-          "change_pct": -9.07
+          "change_pct": -0.03
         },
         {
           "ticker": "MRVL",
           "display_name": "MRVL",
-          "change_pct": -9.1
+          "change_pct": -0.49
         }
       ],
-      "buzz_total": 263,
+      "buzz_total": 286,
       "buzz_top": "Ciena"
     },
     {
       "layer_id": "chip_memory",
       "label": "💾 HBM / Memory",
       "cake_layer": 2,
-      "avg_change": -8.9,
-      "avg_vol_ratio": 0.89,
-      "best_ticker": "Lam Research",
-      "best_pct": -6.48,
-      "worst_ticker": "MU",
-      "worst_pct": -11.01,
+      "avg_change": -0.96,
+      "avg_vol_ratio": 0.98,
+      "best_ticker": "SKHynix",
+      "best_pct": 4.08,
+      "worst_ticker": "Lam Research",
+      "worst_pct": -5.68,
       "top_stocks": [
         {
-          "ticker": "LRCX",
-          "display_name": "Lam Research",
-          "change_pct": -6.48
-        },
-        {
-          "ticker": "WDC",
-          "display_name": "Western Digital",
-          "change_pct": -7.84
+          "ticker": "000660.KS",
+          "display_name": "SKHynix",
+          "change_pct": 4.08
         },
         {
           "ticker": "005930.KS",
           "display_name": "Samsung",
-          "change_pct": -9.24
+          "change_pct": 2.28
+        },
+        {
+          "ticker": "MU",
+          "display_name": "MU",
+          "change_pct": -4.53
         }
       ],
-      "buzz_total": 735,
+      "buzz_total": 725,
       "buzz_top": "MU"
+    },
+    {
+      "layer_id": "application_robotics",
+      "label": "🦾 Industrial Robotics",
+      "cake_layer": 5,
+      "avg_change": -1.27,
+      "avg_vol_ratio": 1.11,
+      "best_ticker": "Rockwell",
+      "best_pct": 0.81,
+      "worst_ticker": "Yaskawa",
+      "worst_pct": -3.85,
+      "top_stocks": [
+        {
+          "ticker": "ROK",
+          "display_name": "Rockwell",
+          "change_pct": 0.81
+        },
+        {
+          "ticker": "ABBNY",
+          "display_name": "ABB",
+          "change_pct": -0.96
+        },
+        {
+          "ticker": "FANUY",
+          "display_name": "FANUC",
+          "change_pct": -1.16
+        }
+      ],
+      "buzz_total": 388,
+      "buzz_top": "Rockwell"
+    },
+    {
+      "layer_id": "chip_core",
+      "label": "🧠 GPU / ASIC",
+      "cake_layer": 2,
+      "avg_change": -2.03,
+      "avg_vol_ratio": 0.92,
+      "best_ticker": "AVGO",
+      "best_pct": -0.07,
+      "worst_ticker": "NVDA",
+      "worst_pct": -3.91,
+      "top_stocks": [
+        {
+          "ticker": "AVGO",
+          "display_name": "AVGO",
+          "change_pct": -0.07
+        },
+        {
+          "ticker": "AMD",
+          "display_name": "AMD",
+          "change_pct": -1.75
+        },
+        {
+          "ticker": "TSM",
+          "display_name": "TSM",
+          "change_pct": -1.96
+        }
+      ],
+      "buzz_total": 101,
+      "buzz_top": "AMD"
     }
   ],
   "social_buzz": {
-    "updated_at": "2026-11-25T05:31:28.101953Z",
+    "updated_at": "2026-11-26T05:13:32.055952Z",
     "sources": [
       "news"
     ],
@@ -370,9 +370,9 @@
         "display_name": "NEE",
         "reddit": 0,
         "youtube": 0,
-        "news": 84,
-        "total": 84,
-        "score": 168
+        "news": 77,
+        "total": 77,
+        "score": 154
       },
       "NRG": {
         "display_name": "NRG Energy",
@@ -418,9 +418,9 @@
         "display_name": "EMCOR",
         "reddit": 0,
         "youtube": 0,
-        "news": 1704,
-        "total": 1704,
-        "score": 3408
+        "news": 1695,
+        "total": 1695,
+        "score": 3390
       },
       "NVDA": {
         "display_name": "NVDA",
@@ -434,9 +434,9 @@
         "display_name": "TSM",
         "reddit": 0,
         "youtube": 0,
-        "news": 35,
-        "total": 35,
-        "score": 70
+        "news": 29,
+        "total": 29,
+        "score": 58
       },
       "AVGO": {
         "display_name": "AVGO",
@@ -450,25 +450,25 @@
         "display_name": "ASML",
         "reddit": 0,
         "youtube": 0,
-        "news": 10,
-        "total": 10,
-        "score": 20
+        "news": 15,
+        "total": 15,
+        "score": 30
       },
       "AMD": {
         "display_name": "AMD",
         "reddit": 0,
         "youtube": 0,
-        "news": 53,
-        "total": 53,
-        "score": 106
+        "news": 57,
+        "total": 57,
+        "score": 114
       },
       "MU": {
         "display_name": "MU",
         "reddit": 0,
         "youtube": 0,
-        "news": 686,
-        "total": 686,
-        "score": 1372
+        "news": 669,
+        "total": 669,
+        "score": 1338
       },
       "000660.KS": {
         "display_name": "SKHynix",
@@ -482,9 +482,9 @@
         "display_name": "Samsung",
         "reddit": 0,
         "youtube": 0,
-        "news": 29,
-        "total": 29,
-        "score": 58
+        "news": 36,
+        "total": 36,
+        "score": 72
       },
       "WDC": {
         "display_name": "Western Digital",
@@ -562,9 +562,9 @@
         "display_name": "LITE",
         "reddit": 0,
         "youtube": 0,
-        "news": 113,
-        "total": 113,
-        "score": 226
+        "news": 120,
+        "total": 120,
+        "score": 240
       },
       "COHR": {
         "display_name": "COHR",
@@ -578,17 +578,17 @@
         "display_name": "Ciena",
         "reddit": 0,
         "youtube": 0,
-        "news": 144,
-        "total": 144,
-        "score": 288
+        "news": 160,
+        "total": 160,
+        "score": 320
       },
       "NOW": {
         "display_name": "NOW",
         "reddit": 0,
         "youtube": 0,
-        "news": 737,
-        "total": 737,
-        "score": 1474
+        "news": 736,
+        "total": 736,
+        "score": 1472
       },
       "PLTR": {
         "display_name": "PLTR",
@@ -618,9 +618,9 @@
         "display_name": "META",
         "reddit": 0,
         "youtube": 0,
-        "news": 183,
-        "total": 183,
-        "score": 366
+        "news": 182,
+        "total": 182,
+        "score": 364
       },
       "FANUY": {
         "display_name": "FANUC",
@@ -642,17 +642,17 @@
         "display_name": "ABB",
         "reddit": 0,
         "youtube": 0,
-        "news": 26,
-        "total": 26,
-        "score": 52
+        "news": 21,
+        "total": 21,
+        "score": 42
       },
       "ROK": {
         "display_name": "Rockwell",
         "reddit": 0,
         "youtube": 0,
-        "news": 359,
-        "total": 359,
-        "score": 718
+        "news": 367,
+        "total": 367,
+        "score": 734
       },
       "TSLA": {
         "display_name": "TSLA",
@@ -682,9 +682,9 @@
         "display_name": "Honeywell",
         "reddit": 0,
         "youtube": 0,
-        "news": 213,
-        "total": 213,
-        "score": 426
+        "news": 219,
+        "total": 219,
+        "score": 438
       },
       "EMR": {
         "display_name": "Emerson",
@@ -698,17 +698,17 @@
         "display_name": "Teradyne",
         "reddit": 0,
         "youtube": 0,
-        "news": 6582,
-        "total": 6582,
-        "score": 13164
+        "news": 6575,
+        "total": 6575,
+        "score": 13150
       },
       "ASTS": {
         "display_name": "AST SpaceMobile",
         "reddit": 0,
         "youtube": 0,
-        "news": 46,
-        "total": 46,
-        "score": 92
+        "news": 56,
+        "total": 56,
+        "score": 112
       },
       "RKLB": {
         "display_name": "Rocket Lab",
@@ -785,28 +785,28 @@
     },
     "by_layer": {
       "energy": {
-        "total": 115,
-        "score": 230,
+        "total": 108,
+        "score": 216,
         "top_ticker": "NEE",
-        "top_score": 168
+        "top_score": 154
       },
       "power_grid": {
-        "total": 1764,
-        "score": 3528,
+        "total": 1755,
+        "score": 3510,
         "top_ticker": "EMCOR",
-        "top_score": 3408
+        "top_score": 3390
       },
       "chip_core": {
-        "total": 98,
-        "score": 196,
+        "total": 101,
+        "score": 202,
         "top_ticker": "AMD",
-        "top_score": 106
+        "top_score": 114
       },
       "chip_memory": {
-        "total": 735,
-        "score": 1470,
+        "total": 725,
+        "score": 1450,
         "top_ticker": "MU",
-        "top_score": 1372
+        "top_score": 1338
       },
       "chip_cpu": {
         "total": 104,
@@ -815,34 +815,34 @@
         "top_score": 184
       },
       "infra_cpo": {
-        "total": 263,
-        "score": 526,
+        "total": 286,
+        "score": 572,
         "top_ticker": "Ciena",
-        "top_score": 288
+        "top_score": 320
       },
       "model_software": {
-        "total": 920,
-        "score": 1840,
+        "total": 918,
+        "score": 1836,
         "top_ticker": "NOW",
-        "top_score": 1474
+        "top_score": 1472
       },
       "application_robotics": {
-        "total": 385,
-        "score": 770,
+        "total": 388,
+        "score": 776,
         "top_ticker": "Rockwell",
-        "top_score": 718
+        "top_score": 734
       },
       "humanoid_robotics": {
-        "total": 7978,
-        "score": 15956,
+        "total": 7977,
+        "score": 15954,
         "top_ticker": "Teradyne",
-        "top_score": 13164
+        "top_score": 13150
       },
       "satellite": {
-        "total": 46,
-        "score": 92,
+        "total": 56,
+        "score": 112,
         "top_ticker": "AST SpaceMobile",
-        "top_score": 92
+        "top_score": 112
       },
       "consumer": {
         "total": 271,
@@ -857,18 +857,18 @@
         "display_name": "Teradyne",
         "reddit": 0,
         "youtube": 0,
-        "news": 6582,
-        "total": 6582,
-        "score": 13164
+        "news": 6575,
+        "total": 6575,
+        "score": 13150
       },
       {
         "ticker": "EME",
         "display_name": "EMCOR",
         "reddit": 0,
         "youtube": 0,
-        "news": 1704,
-        "total": 1704,
-        "score": 3408
+        "news": 1695,
+        "total": 1695,
+        "score": 3390
       },
       {
         "ticker": "PATH",
@@ -884,31 +884,31 @@
         "display_name": "NOW",
         "reddit": 0,
         "youtube": 0,
-        "news": 737,
-        "total": 737,
-        "score": 1474
+        "news": 736,
+        "total": 736,
+        "score": 1472
       },
       {
         "ticker": "MU",
         "display_name": "MU",
         "reddit": 0,
         "youtube": 0,
-        "news": 686,
-        "total": 686,
-        "score": 1372
+        "news": 669,
+        "total": 669,
+        "score": 1338
       }
     ]
   },
   "data_quality": {
     "status": "warning",
-    "checked_at": "2026-11-25T05:31:09.142145Z",
+    "checked_at": "2026-11-26T05:13:12.675930Z",
     "summary": "1 warning(s), 0 errors",
     "issues": [
       {
         "level": "warning",
         "check": "missing_tickers",
         "ticker": null,
-        "detail": "1 ticker(s) missing from fetch: ROK"
+        "detail": "1 ticker(s) missing from fetch: WDC"
       }
     ]
   }
